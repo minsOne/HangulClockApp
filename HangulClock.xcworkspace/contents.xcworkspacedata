@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "Feature">
+      <FileRef
+         location = "group:Main/Main.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Core">
+      <FileRef
+         location = "group:Resource/Resource.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Logger/Logger.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Umbrella">
+      <FileRef
+         location = "group:Umbrella/Umbrella.xcodeproj">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:App/App.xcodeproj">
    </FileRef>

@@ -12,7 +12,30 @@
 		CB6870B723EC604F002FA3C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6870B523EC604F002FA3C5 /* Main.storyboard */; };
 		CB6870B923EC6054002FA3C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB6870B823EC6054002FA3C5 /* Assets.xcassets */; };
 		CB6870BC23EC6054002FA3C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6870BA23EC6054002FA3C5 /* LaunchScreen.storyboard */; };
+		CB6870C623EC6321002FA3C5 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6870C423EC6320002FA3C5 /* RIBs.framework */; };
+		CB6870C723EC6321002FA3C5 /* RIBs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB6870C423EC6320002FA3C5 /* RIBs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB6870C823EC6321002FA3C5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6870C523EC6321002FA3C5 /* RxSwift.framework */; };
+		CB6870C923EC6321002FA3C5 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB6870C523EC6321002FA3C5 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB6871A323EC667E002FA3C5 /* Resource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871A223EC667E002FA3C5 /* Resource.framework */; };
+		CB6871A423EC667E002FA3C5 /* Resource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871A223EC667E002FA3C5 /* Resource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB6871A623EC6686002FA3C5 /* Umbrella.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871A523EC6686002FA3C5 /* Umbrella.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CB6870CA23EC6321002FA3C5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CB6870C923EC6321002FA3C5 /* RxSwift.framework in Embed Frameworks */,
+				CB6871A423EC667E002FA3C5 /* Resource.framework in Embed Frameworks */,
+				CB6870C723EC6321002FA3C5 /* RIBs.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CB6870AC23EC604F002FA3C5 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +45,10 @@
 		CB6870B823EC6054002FA3C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB6870BB23EC6054002FA3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB6870BD23EC6054002FA3C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB6870C423EC6320002FA3C5 /* RIBs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RIBs.framework; path = ../Carthage/Build/iOS/RIBs.framework; sourceTree = "<group>"; };
+		CB6870C523EC6321002FA3C5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		CB6871A223EC667E002FA3C5 /* Resource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB6871A523EC6686002FA3C5 /* Umbrella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Umbrella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +56,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB6870C823EC6321002FA3C5 /* RxSwift.framework in Frameworks */,
+				CB6871A323EC667E002FA3C5 /* Resource.framework in Frameworks */,
+				CB6871A623EC6686002FA3C5 /* Umbrella.framework in Frameworks */,
+				CB6870C623EC6321002FA3C5 /* RIBs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +71,7 @@
 			children = (
 				CB6870AE23EC604F002FA3C5 /* App */,
 				CB6870AD23EC604F002FA3C5 /* Products */,
+				CB6870C323EC6320002FA3C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +96,17 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		CB6870C323EC6320002FA3C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB6871A523EC6686002FA3C5 /* Umbrella.framework */,
+				CB6871A223EC667E002FA3C5 /* Resource.framework */,
+				CB6870C423EC6320002FA3C5 /* RIBs.framework */,
+				CB6870C523EC6321002FA3C5 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +117,7 @@
 				CB6870A823EC604F002FA3C5 /* Sources */,
 				CB6870A923EC604F002FA3C5 /* Frameworks */,
 				CB6870AA23EC604F002FA3C5 /* Resources */,
+				CB6870CA23EC6321002FA3C5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,13 +256,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/build/iOS";
 			};
 			name = Debug;
 		};
@@ -266,12 +311,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/build/iOS";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
