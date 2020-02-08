@@ -9,13 +9,28 @@
 /* Begin PBXBuildFile section */
 		CB68721123EEAEBD002FA3C5 /* HangulClockTable.h in Headers */ = {isa = PBXBuildFile; fileRef = CB68720F23EEAEBD002FA3C5 /* HangulClockTable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB68721923EEAED8002FA3C5 /* HangulTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68721823EEAED8002FA3C5 /* HangulTable.swift */; };
+		CB68722123EEFE7F002FA3C5 /* HangulClockTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68722023EEFE7F002FA3C5 /* HangulClockTableTests.swift */; };
+		CB68722323EEFE7F002FA3C5 /* HangulClockTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68720C23EEAEBD002FA3C5 /* HangulClockTable.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB68722423EEFE7F002FA3C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB68720323EEAEBD002FA3C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB68720B23EEAEBD002FA3C5;
+			remoteInfo = HangulClockTable;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CB68720C23EEAEBD002FA3C5 /* HangulClockTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HangulClockTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB68720F23EEAEBD002FA3C5 /* HangulClockTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HangulClockTable.h; sourceTree = "<group>"; };
 		CB68721023EEAEBD002FA3C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB68721823EEAED8002FA3C5 /* HangulTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangulTable.swift; sourceTree = "<group>"; };
+		CB68721E23EEFE7F002FA3C5 /* HangulClockTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HangulClockTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB68722023EEFE7F002FA3C5 /* HangulClockTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangulClockTableTests.swift; sourceTree = "<group>"; };
+		CB68722223EEFE7F002FA3C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +41,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB68721B23EEFE7F002FA3C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB68722323EEFE7F002FA3C5 /* HangulClockTable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				CB68720E23EEAEBD002FA3C5 /* HangulClockTable */,
+				CB68721F23EEFE7F002FA3C5 /* HangulClockTableTests */,
 				CB68720D23EEAEBD002FA3C5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				CB68720C23EEAEBD002FA3C5 /* HangulClockTable.framework */,
+				CB68721E23EEFE7F002FA3C5 /* HangulClockTableTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +86,15 @@
 				CB68721823EEAED8002FA3C5 /* HangulTable.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		CB68721F23EEFE7F002FA3C5 /* HangulClockTableTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB68722023EEFE7F002FA3C5 /* HangulClockTableTests.swift */,
+				CB68722223EEFE7F002FA3C5 /* Info.plist */,
+			);
+			path = HangulClockTableTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,18 +129,40 @@
 			productReference = CB68720C23EEAEBD002FA3C5 /* HangulClockTable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		CB68721D23EEFE7F002FA3C5 /* HangulClockTableTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB68722623EEFE7F002FA3C5 /* Build configuration list for PBXNativeTarget "HangulClockTableTests" */;
+			buildPhases = (
+				CB68721A23EEFE7F002FA3C5 /* Sources */,
+				CB68721B23EEFE7F002FA3C5 /* Frameworks */,
+				CB68721C23EEFE7F002FA3C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB68722523EEFE7F002FA3C5 /* PBXTargetDependency */,
+			);
+			name = HangulClockTableTests;
+			productName = HangulClockTableTests;
+			productReference = CB68721E23EEFE7F002FA3C5 /* HangulClockTableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		CB68720323EEAEBD002FA3C5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = minsone;
 				TargetAttributes = {
 					CB68720B23EEAEBD002FA3C5 = {
 						CreatedOnToolsVersion = 11.2.1;
 						LastSwiftMigration = 1120;
+					};
+					CB68721D23EEFE7F002FA3C5 = {
+						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
 			};
@@ -124,12 +180,20 @@
 			projectRoot = "";
 			targets = (
 				CB68720B23EEAEBD002FA3C5 /* HangulClockTable */,
+				CB68721D23EEFE7F002FA3C5 /* HangulClockTableTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CB68720A23EEAEBD002FA3C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB68721C23EEFE7F002FA3C5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -147,7 +211,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB68721A23EEFE7F002FA3C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB68722123EEFE7F002FA3C5 /* HangulClockTableTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB68722523EEFE7F002FA3C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB68720B23EEAEBD002FA3C5 /* HangulClockTable */;
+			targetProxy = CB68722423EEFE7F002FA3C5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CB68721223EEAEBD002FA3C5 /* Debug */ = {
@@ -201,7 +281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -258,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,11 +362,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = HangulClockTable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.Hangul.HangulClockTable;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -308,14 +390,52 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = HangulClockTable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.Hangul.HangulClockTable;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CB68722723EEFE7F002FA3C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6794ZU679A;
+				INFOPLIST_FILE = HangulClockTableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.Hangul.HangulClockTableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB68722823EEFE7F002FA3C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6794ZU679A;
+				INFOPLIST_FILE = HangulClockTableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.Hangul.HangulClockTableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -338,6 +458,15 @@
 			buildConfigurations = (
 				CB68721523EEAEBD002FA3C5 /* Debug */,
 				CB68721623EEAEBD002FA3C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB68722623EEFE7F002FA3C5 /* Build configuration list for PBXNativeTarget "HangulClockTableTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB68722723EEFE7F002FA3C5 /* Debug */,
+				CB68722823EEFE7F002FA3C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -22,6 +22,7 @@
 		CB6871F723EE53DD002FA3C5 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871F623EE53DD002FA3C5 /* ViewState.swift */; };
 		CB6871F923EE54BC002FA3C5 /* TimeIntervalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871F823EE54BC002FA3C5 /* TimeIntervalService.swift */; };
 		CB6871FC23EE5673002FA3C5 /* DateFormatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871FB23EE5673002FA3C5 /* DateFormatService.swift */; };
+		CB68722A23EF0780002FA3C5 /* HangulClockTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68722923EF0780002FA3C5 /* HangulClockTable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		CB6871F623EE53DD002FA3C5 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		CB6871F823EE54BC002FA3C5 /* TimeIntervalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalService.swift; sourceTree = "<group>"; };
 		CB6871FB23EE5673002FA3C5 /* DateFormatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatService.swift; sourceTree = "<group>"; };
+		CB68722923EF0780002FA3C5 /* HangulClockTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HangulClockTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			files = (
 				CB6871D023EDB7E5002FA3C5 /* PureSwiftUI in Frameworks */,
 				CB6871C823EDB51B002FA3C5 /* RxCocoa.framework in Frameworks */,
+				CB68722A23EF0780002FA3C5 /* HangulClockTable.framework in Frameworks */,
 				CB6871DA23EDBB9B002FA3C5 /* PureSwiftUITools in Frameworks */,
 				CB6871AE23EDAF1E002FA3C5 /* RxSwift.framework in Frameworks */,
 				CB6871AC23EDAF1E002FA3C5 /* RIBs.framework in Frameworks */,
@@ -103,6 +106,7 @@
 		CB6871A923EDAF1E002FA3C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB68722923EF0780002FA3C5 /* HangulClockTable.framework */,
 				CB6871C523EDB51B002FA3C5 /* RxCocoa.framework */,
 				CB6871C423EDB51B002FA3C5 /* RxRelay.framework */,
 				CB6871AA23EDAF1E002FA3C5 /* RIBs.framework */,

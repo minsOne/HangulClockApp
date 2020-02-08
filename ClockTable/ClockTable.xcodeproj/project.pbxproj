@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CB6871EA23EDC667002FA3C5 /* ClockTable.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6871E823EDC667002FA3C5 /* ClockTable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB6871F223EDC692002FA3C5 /* HangulClockTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871F123EDC692002FA3C5 /* HangulClockTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CB6871E523EDC667002FA3C5 /* ClockTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClockTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6871E823EDC667002FA3C5 /* ClockTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClockTable.h; sourceTree = "<group>"; };
 		CB6871E923EDC667002FA3C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB6871F123EDC692002FA3C5 /* HangulClockTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangulClockTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +56,6 @@
 		CB6871F023EDC677002FA3C5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				CB6871F123EDC692002FA3C5 /* HangulClockTable.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -143,7 +140,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB6871F223EDC692002FA3C5 /* HangulClockTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

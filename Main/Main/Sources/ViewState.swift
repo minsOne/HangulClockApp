@@ -13,7 +13,8 @@ protocol ViewStateListner: class {
 }
 
 public class ViewState: ObservableObject {
-    @Published var date: String = "Hello world"
+    @Published var gridTexts: [[String]] = []
+    @Published var gridMarks: [[Bool]] = []
     
     weak var listener: ViewStateListner?
     
