@@ -24,8 +24,6 @@
 		CB6871CC23EDB52B002FA3C5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871CB23EDB52B002FA3C5 /* RxCocoa.framework */; };
 		CB6871CD23EDB52B002FA3C5 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871CB23EDB52B002FA3C5 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB6871D723EDB9BB002FA3C5 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871D523EDB9B2002FA3C5 /* Preview.swift */; };
-		CB6871F423EDC733002FA3C5 /* ClockTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871F323EDC732002FA3C5 /* ClockTable.framework */; };
-		CB6871F523EDC733002FA3C5 /* ClockTable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871F323EDC732002FA3C5 /* ClockTable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,7 +37,6 @@
 				CB6870C923EC6321002FA3C5 /* RxSwift.framework in Embed Frameworks */,
 				CB6871A423EC667E002FA3C5 /* Resource.framework in Embed Frameworks */,
 				CB6871CD23EDB52B002FA3C5 /* RxCocoa.framework in Embed Frameworks */,
-				CB6871F523EDC733002FA3C5 /* ClockTable.framework in Embed Frameworks */,
 				CB6870C723EC6321002FA3C5 /* RIBs.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -74,7 +71,6 @@
 				CB6871A323EC667E002FA3C5 /* Resource.framework in Frameworks */,
 				CB6871CC23EDB52B002FA3C5 /* RxCocoa.framework in Frameworks */,
 				CB6871C223EDB4F1002FA3C5 /* RxRelay.framework in Frameworks */,
-				CB6871F423EDC733002FA3C5 /* ClockTable.framework in Frameworks */,
 				CB6871A623EC6686002FA3C5 /* Umbrella.framework in Frameworks */,
 				CB6870C623EC6321002FA3C5 /* RIBs.framework in Frameworks */,
 				CB6871BA23EDB1AC002FA3C5 /* Main.framework in Frameworks */,
