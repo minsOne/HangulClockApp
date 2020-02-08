@@ -27,7 +27,8 @@ extension MainView: View {
                 .opacity(self.model.gridMarks[row][column] ? 1 : 0.4)
                 .animation(.easeInOut(duration: 0.5))
                 .greedyFrame()
-                .shadow(5)
+//                .shadowIf(self.model.gridMarks[row][column], color: .white, radius: 10)
+//                .shadowColor(.white, 5)
         }
         .frame(size.width, size.height)
         .onAppear(perform: model.onAppear)

@@ -23,6 +23,8 @@
 		CB6871CC23EDB52B002FA3C5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871CB23EDB52B002FA3C5 /* RxCocoa.framework */; };
 		CB6871CD23EDB52B002FA3C5 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871CB23EDB52B002FA3C5 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB6871D723EDB9BB002FA3C5 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871D523EDB9B2002FA3C5 /* Preview.swift */; };
+		CBEF536123EF276E00285179 /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBEF536023EF276E00285179 /* Logger.framework */; };
+		CBEF536223EF276E00285179 /* Logger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBEF536023EF276E00285179 /* Logger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +34,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CBEF536223EF276E00285179 /* Logger.framework in Embed Frameworks */,
 				CB6871C323EDB4F1002FA3C5 /* RxRelay.framework in Embed Frameworks */,
 				CB6870C923EC6321002FA3C5 /* RxSwift.framework in Embed Frameworks */,
 				CB6871A423EC667E002FA3C5 /* Resource.framework in Embed Frameworks */,
@@ -59,6 +62,7 @@
 		CB6871CB23EDB52B002FA3C5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		CB6871D523EDB9B2002FA3C5 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 		CB6871F323EDC732002FA3C5 /* ClockTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClockTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBEF536023EF276E00285179 /* Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB6870C823EC6321002FA3C5 /* RxSwift.framework in Frameworks */,
+				CBEF536123EF276E00285179 /* Logger.framework in Frameworks */,
 				CB6871A323EC667E002FA3C5 /* Resource.framework in Frameworks */,
 				CB6871CC23EDB52B002FA3C5 /* RxCocoa.framework in Frameworks */,
 				CB6871C223EDB4F1002FA3C5 /* RxRelay.framework in Frameworks */,
@@ -111,6 +116,7 @@
 		CB6870C323EC6320002FA3C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CBEF536023EF276E00285179 /* Logger.framework */,
 				CB6871F323EDC732002FA3C5 /* ClockTable.framework */,
 				CB6871CB23EDB52B002FA3C5 /* RxCocoa.framework */,
 				CB6871C123EDB4F1002FA3C5 /* RxRelay.framework */,
@@ -271,7 +277,6 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/build/iOS";
 			};
 			name = Debug;
 		};
@@ -325,7 +330,6 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/build/iOS";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -336,6 +340,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6794ZU679A;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../Vender/**",
+					"$(PROJECT_DIR)/../OpenSources",
+				);
 				INFOPLIST_FILE = App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -345,7 +354,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.Hangul.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../OpenSources";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -356,6 +364,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6794ZU679A;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../Vender/**",
+					"$(PROJECT_DIR)/../OpenSources",
+				);
 				INFOPLIST_FILE = App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -365,7 +378,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.Hangul.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../OpenSources";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

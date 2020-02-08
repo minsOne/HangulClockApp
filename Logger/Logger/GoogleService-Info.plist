@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>875399153916-j7tgnqj89ahefv88agfo10ouadtnj8bl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.875399153916-j7tgnqj89ahefv88agfo10ouadtnj8bl</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBqJacbcEMpqR4JKszEcUr11EUghFIf7IA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>875399153916</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>kr.minsOne.Labs.Hangul.App</string>
+	<key>PROJECT_ID</key>
+	<string>hangulclock-1d302</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hangulclock-1d302.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:875399153916:ios:e39f9396df9fc379a9af79</string>
+	<key>DATABASE_URL</key>
+	<string>https://hangulclock-1d302.firebaseio.com</string>
+</dict>
+</plist>

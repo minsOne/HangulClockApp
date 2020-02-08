@@ -10,6 +10,7 @@ import UIKit
 import RIBs
 import Main
 import Resource
+import Logger
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -19,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        configure()
+        
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
         
@@ -27,6 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         launchRouter.launch(from: window)
         
         return true
+    }
+    
+    private func configure() {
+        Logger.Firebase.register()
     }
 }
 

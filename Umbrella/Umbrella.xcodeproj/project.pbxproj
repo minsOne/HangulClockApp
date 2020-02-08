@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CB68719123EC6508002FA3C5 /* Umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB68718F23EC6508002FA3C5 /* Umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB68719B23EC6528002FA3C5 /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68719823EC6528002FA3C5 /* Logger.framework */; };
 		CB68719D23EC6528002FA3C5 /* Main.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68719923EC6528002FA3C5 /* Main.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +25,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB68719B23EC6528002FA3C5 /* Logger.framework in Frameworks */,
 				CB68719D23EC6528002FA3C5 /* Main.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
