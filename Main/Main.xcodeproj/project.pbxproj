@@ -3,17 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		CB68717C23EC64A5002FA3C5 /* Main.h in Headers */ = {isa = PBXBuildFile; fileRef = CB68717A23EC64A5002FA3C5 /* Main.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB6871AC23EDAF1E002FA3C5 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871AA23EDAF1E002FA3C5 /* RIBs.framework */; };
+		CB6871AE23EDAF1E002FA3C5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871AB23EDAF1E002FA3C5 /* RxSwift.framework */; };
+		CB6871B523EDAFE6002FA3C5 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871B123EDAFE6002FA3C5 /* MainRouter.swift */; };
+		CB6871B623EDAFE6002FA3C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871B223EDAFE6002FA3C5 /* MainViewController.swift */; };
+		CB6871B723EDAFE6002FA3C5 /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871B323EDAFE6002FA3C5 /* MainBuilder.swift */; };
+		CB6871B823EDAFE6002FA3C5 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871B423EDAFE6002FA3C5 /* MainInteractor.swift */; };
+		CB6871C623EDB51B002FA3C5 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871C423EDB51B002FA3C5 /* RxRelay.framework */; };
+		CB6871C823EDB51B002FA3C5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871C523EDB51B002FA3C5 /* RxCocoa.framework */; };
+		CB6871D023EDB7E5002FA3C5 /* PureSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CB6871CF23EDB7E5002FA3C5 /* PureSwiftUI */; };
+		CB6871D423EDB907002FA3C5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871D323EDB907002FA3C5 /* MainView.swift */; };
+		CB6871DA23EDBB9B002FA3C5 /* PureSwiftUITools in Frameworks */ = {isa = PBXBuildFile; productRef = CB6871D923EDBB9B002FA3C5 /* PureSwiftUITools */; };
+		CB6871F723EE53DD002FA3C5 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871F623EE53DD002FA3C5 /* ViewState.swift */; };
+		CB6871F923EE54BC002FA3C5 /* TimeIntervalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871F823EE54BC002FA3C5 /* TimeIntervalService.swift */; };
+		CB6871FC23EE5673002FA3C5 /* DateFormatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871FB23EE5673002FA3C5 /* DateFormatService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CB68717723EC64A5002FA3C5 /* Main.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Main.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB68717A23EC64A5002FA3C5 /* Main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Main.h; sourceTree = "<group>"; };
 		CB68717B23EC64A5002FA3C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB6871AA23EDAF1E002FA3C5 /* RIBs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RIBs.framework; path = ../Carthage/Build/iOS/RIBs.framework; sourceTree = "<group>"; };
+		CB6871AB23EDAF1E002FA3C5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		CB6871B123EDAFE6002FA3C5 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		CB6871B223EDAFE6002FA3C5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CB6871B323EDAFE6002FA3C5 /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
+		CB6871B423EDAFE6002FA3C5 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		CB6871C423EDB51B002FA3C5 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = ../Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		CB6871C523EDB51B002FA3C5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		CB6871D323EDB907002FA3C5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CB6871F623EE53DD002FA3C5 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		CB6871F823EE54BC002FA3C5 /* TimeIntervalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalService.swift; sourceTree = "<group>"; };
+		CB6871FB23EE5673002FA3C5 /* DateFormatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +47,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB6871D023EDB7E5002FA3C5 /* PureSwiftUI in Frameworks */,
+				CB6871C823EDB51B002FA3C5 /* RxCocoa.framework in Frameworks */,
+				CB6871DA23EDBB9B002FA3C5 /* PureSwiftUITools in Frameworks */,
+				CB6871AE23EDAF1E002FA3C5 /* RxSwift.framework in Frameworks */,
+				CB6871AC23EDAF1E002FA3C5 /* RIBs.framework in Frameworks */,
+				CB6871C623EDB51B002FA3C5 /* RxRelay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +64,7 @@
 			children = (
 				CB68717923EC64A5002FA3C5 /* Main */,
 				CB68717823EC64A5002FA3C5 /* Products */,
+				CB6871A923EDAF1E002FA3C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +89,35 @@
 		CB6871A823EC66CC002FA3C5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CB6871B323EDAFE6002FA3C5 /* MainBuilder.swift */,
+				CB6871B423EDAFE6002FA3C5 /* MainInteractor.swift */,
+				CB6871B123EDAFE6002FA3C5 /* MainRouter.swift */,
+				CB6871D323EDB907002FA3C5 /* MainView.swift */,
+				CB6871B223EDAFE6002FA3C5 /* MainViewController.swift */,
+				CB6871F623EE53DD002FA3C5 /* ViewState.swift */,
+				CB6871FA23EE5666002FA3C5 /* Service */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		CB6871A923EDAF1E002FA3C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB6871C523EDB51B002FA3C5 /* RxCocoa.framework */,
+				CB6871C423EDB51B002FA3C5 /* RxRelay.framework */,
+				CB6871AA23EDAF1E002FA3C5 /* RIBs.framework */,
+				CB6871AB23EDAF1E002FA3C5 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB6871FA23EE5666002FA3C5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CB6871F823EE54BC002FA3C5 /* TimeIntervalService.swift */,
+				CB6871FB23EE5673002FA3C5 /* DateFormatService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +148,10 @@
 			dependencies = (
 			);
 			name = Main;
+			packageProductDependencies = (
+				CB6871CF23EDB7E5002FA3C5 /* PureSwiftUI */,
+				CB6871D923EDBB9B002FA3C5 /* PureSwiftUITools */,
+			);
 			productName = Main;
 			productReference = CB68717723EC64A5002FA3C5 /* Main.framework */;
 			productType = "com.apple.product-type.framework";
@@ -115,6 +179,10 @@
 				Base,
 			);
 			mainGroup = CB68716D23EC64A5002FA3C5;
+			packageReferences = (
+				CB6871CE23EDB7E4002FA3C5 /* XCRemoteSwiftPackageReference "pure-swift-ui" */,
+				CB6871D823EDBB9B002FA3C5 /* XCRemoteSwiftPackageReference "pure-swift-ui-tools" */,
+			);
 			productRefGroup = CB68717823EC64A5002FA3C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +207,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB6871B523EDAFE6002FA3C5 /* MainRouter.swift in Sources */,
+				CB6871F923EE54BC002FA3C5 /* TimeIntervalService.swift in Sources */,
+				CB6871FC23EE5673002FA3C5 /* DateFormatService.swift in Sources */,
+				CB6871B623EDAFE6002FA3C5 /* MainViewController.swift in Sources */,
+				CB6871F723EE53DD002FA3C5 /* ViewState.swift in Sources */,
+				CB6871B723EDAFE6002FA3C5 /* MainBuilder.swift in Sources */,
+				CB6871D423EDB907002FA3C5 /* MainView.swift in Sources */,
+				CB6871B823EDAFE6002FA3C5 /* MainInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +350,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				INFOPLIST_FILE = Main/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -286,6 +363,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../OpenSources";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -299,6 +377,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				INFOPLIST_FILE = Main/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -311,6 +390,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../OpenSources";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -337,6 +417,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB6871CE23EDB7E4002FA3C5 /* XCRemoteSwiftPackageReference "pure-swift-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CodeSlicing/pure-swift-ui";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.12.0;
+			};
+		};
+		CB6871D823EDBB9B002FA3C5 /* XCRemoteSwiftPackageReference "pure-swift-ui-tools" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CodeSlicing/pure-swift-ui-tools";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB6871CF23EDB7E5002FA3C5 /* PureSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB6871CE23EDB7E4002FA3C5 /* XCRemoteSwiftPackageReference "pure-swift-ui" */;
+			productName = PureSwiftUI;
+		};
+		CB6871D923EDBB9B002FA3C5 /* PureSwiftUITools */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB6871D823EDBB9B002FA3C5 /* XCRemoteSwiftPackageReference "pure-swift-ui-tools" */;
+			productName = PureSwiftUITools;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CB68716E23EC64A5002FA3C5 /* Project object */;
 }

@@ -1,2 +1,10 @@
-[Cache]
-  local = ~/Library/Caches/Rome/
+cache: # required
+  # at least one of the following is required:
+  local: ~/Library/Caches/Rome # optional and can be combined with either a `s3Bucket` or `engine`
+repositoryMap: # optional
+- RxSwift:
+  - name: RxSwift
+  - name: RxCocoa
+  - name: RxBlocking
+  - name: RxRelay
+  - name: RxTest

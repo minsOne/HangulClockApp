@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CB6870B023EC604F002FA3C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6870AF23EC604F002FA3C5 /* AppDelegate.swift */; };
-		CB6870B423EC604F002FA3C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6870B323EC604F002FA3C5 /* ViewController.swift */; };
-		CB6870B723EC604F002FA3C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6870B523EC604F002FA3C5 /* Main.storyboard */; };
 		CB6870B923EC6054002FA3C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB6870B823EC6054002FA3C5 /* Assets.xcassets */; };
 		CB6870BC23EC6054002FA3C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6870BA23EC6054002FA3C5 /* LaunchScreen.storyboard */; };
 		CB6870C623EC6321002FA3C5 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6870C423EC6320002FA3C5 /* RIBs.framework */; };
@@ -19,6 +17,15 @@
 		CB6871A323EC667E002FA3C5 /* Resource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871A223EC667E002FA3C5 /* Resource.framework */; };
 		CB6871A423EC667E002FA3C5 /* Resource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871A223EC667E002FA3C5 /* Resource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB6871A623EC6686002FA3C5 /* Umbrella.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871A523EC6686002FA3C5 /* Umbrella.framework */; };
+		CB6871BA23EDB1AC002FA3C5 /* Main.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871B923EDB1AC002FA3C5 /* Main.framework */; };
+		CB6871C023EDB25D002FA3C5 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871BF23EDB25D002FA3C5 /* AppComponent.swift */; };
+		CB6871C223EDB4F1002FA3C5 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871C123EDB4F1002FA3C5 /* RxRelay.framework */; };
+		CB6871C323EDB4F1002FA3C5 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871C123EDB4F1002FA3C5 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB6871CC23EDB52B002FA3C5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871CB23EDB52B002FA3C5 /* RxCocoa.framework */; };
+		CB6871CD23EDB52B002FA3C5 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871CB23EDB52B002FA3C5 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB6871D723EDB9BB002FA3C5 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871D523EDB9B2002FA3C5 /* Preview.swift */; };
+		CB6871F423EDC733002FA3C5 /* ClockTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871F323EDC732002FA3C5 /* ClockTable.framework */; };
+		CB6871F523EDC733002FA3C5 /* ClockTable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871F323EDC732002FA3C5 /* ClockTable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,8 +35,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CB6871C323EDB4F1002FA3C5 /* RxRelay.framework in Embed Frameworks */,
 				CB6870C923EC6321002FA3C5 /* RxSwift.framework in Embed Frameworks */,
 				CB6871A423EC667E002FA3C5 /* Resource.framework in Embed Frameworks */,
+				CB6871CD23EDB52B002FA3C5 /* RxCocoa.framework in Embed Frameworks */,
+				CB6871F523EDC733002FA3C5 /* ClockTable.framework in Embed Frameworks */,
 				CB6870C723EC6321002FA3C5 /* RIBs.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -40,8 +50,6 @@
 /* Begin PBXFileReference section */
 		CB6870AC23EC604F002FA3C5 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6870AF23EC604F002FA3C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB6870B323EC604F002FA3C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CB6870B623EC604F002FA3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB6870B823EC6054002FA3C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB6870BB23EC6054002FA3C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB6870BD23EC6054002FA3C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +57,12 @@
 		CB6870C523EC6321002FA3C5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		CB6871A223EC667E002FA3C5 /* Resource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6871A523EC6686002FA3C5 /* Umbrella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Umbrella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB6871B923EDB1AC002FA3C5 /* Main.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Main.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB6871BF23EDB25D002FA3C5 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		CB6871C123EDB4F1002FA3C5 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = ../Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		CB6871CB23EDB52B002FA3C5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		CB6871D523EDB9B2002FA3C5 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
+		CB6871F323EDC732002FA3C5 /* ClockTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClockTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +72,12 @@
 			files = (
 				CB6870C823EC6321002FA3C5 /* RxSwift.framework in Frameworks */,
 				CB6871A323EC667E002FA3C5 /* Resource.framework in Frameworks */,
+				CB6871CC23EDB52B002FA3C5 /* RxCocoa.framework in Frameworks */,
+				CB6871C223EDB4F1002FA3C5 /* RxRelay.framework in Frameworks */,
+				CB6871F423EDC733002FA3C5 /* ClockTable.framework in Frameworks */,
 				CB6871A623EC6686002FA3C5 /* Umbrella.framework in Frameworks */,
 				CB6870C623EC6321002FA3C5 /* RIBs.framework in Frameworks */,
+				CB6871BA23EDB1AC002FA3C5 /* Main.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,8 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				CB6870AF23EC604F002FA3C5 /* AppDelegate.swift */,
-				CB6870B323EC604F002FA3C5 /* ViewController.swift */,
-				CB6870B523EC604F002FA3C5 /* Main.storyboard */,
+				CB6871BF23EDB25D002FA3C5 /* AppComponent.swift */,
+				CB6871D523EDB9B2002FA3C5 /* Preview.swift */,
 				CB6870B823EC6054002FA3C5 /* Assets.xcassets */,
 				CB6870BA23EC6054002FA3C5 /* LaunchScreen.storyboard */,
 				CB6870BD23EC6054002FA3C5 /* Info.plist */,
@@ -99,6 +117,10 @@
 		CB6870C323EC6320002FA3C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB6871F323EDC732002FA3C5 /* ClockTable.framework */,
+				CB6871CB23EDB52B002FA3C5 /* RxCocoa.framework */,
+				CB6871C123EDB4F1002FA3C5 /* RxRelay.framework */,
+				CB6871B923EDB1AC002FA3C5 /* Main.framework */,
 				CB6871A523EC6686002FA3C5 /* Umbrella.framework */,
 				CB6871A223EC667E002FA3C5 /* Resource.framework */,
 				CB6870C423EC6320002FA3C5 /* RIBs.framework */,
@@ -168,7 +190,6 @@
 			files = (
 				CB6870BC23EC6054002FA3C5 /* LaunchScreen.storyboard in Resources */,
 				CB6870B923EC6054002FA3C5 /* Assets.xcassets in Resources */,
-				CB6870B723EC604F002FA3C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,22 +200,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB6870B423EC604F002FA3C5 /* ViewController.swift in Sources */,
 				CB6870B023EC604F002FA3C5 /* AppDelegate.swift in Sources */,
+				CB6871D723EDB9BB002FA3C5 /* Preview.swift in Sources */,
+				CB6871C023EDB25D002FA3C5 /* AppComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CB6870B523EC604F002FA3C5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB6870B623EC604F002FA3C5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CB6870BA23EC6054002FA3C5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -337,6 +351,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.Hangul.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../OpenSources";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -356,6 +371,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.Hangul.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../OpenSources";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

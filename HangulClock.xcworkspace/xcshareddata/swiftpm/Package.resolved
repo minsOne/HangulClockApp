@@ -2,12 +2,21 @@
   "object": {
     "pins": [
       {
-        "package": "RxSwift",
-        "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
+        "package": "PureSwiftUI",
+        "repositoryURL": "https://github.com/CodeSlicing/pure-swift-ui",
         "state": {
           "branch": null,
-          "revision": "b3e888b4972d9bc76495dd74d30a8c7fad4b9395",
-          "version": "5.0.1"
+          "revision": "8699e207b2cbdb0efcf8c8e8c61c6f7a940051cd",
+          "version": "1.12.0"
+        }
+      },
+      {
+        "package": "PureSwiftUITools",
+        "repositoryURL": "https://github.com/CodeSlicing/pure-swift-ui-tools",
+        "state": {
+          "branch": null,
+          "revision": "eccdd5e6d1393a0260dc3c3e541fe7b3790892aa",
+          "version": "1.1.0"
         }
       }
     ]
