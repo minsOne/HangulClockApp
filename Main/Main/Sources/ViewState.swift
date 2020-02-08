@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import HangulClockTable
 
 protocol ViewStateListner: class {
     func onAppear()
@@ -20,5 +21,46 @@ public class ViewState: ObservableObject {
     
     func onAppear() {
         listener?.onAppear()
+    }
+    
+    func updateDate(date: Date) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm:ss"
+        let today = dateFormatter.string(from: date)
+        dateFormatter.dateFormat = "HH"
+        let hour = dateFormatter.string(from: date)
+        dateFormatter.dateFormat = "mm"
+        let minute = dateFormatter.string(from: date)
+        print(#function, today, hour, minute)
+        
+        var mark = HangulTable.marks
+        let markList = HangulTable.Mark.midDay(str: hour)
+            + HangulTable.Mark.midNight(str: hour)
+            + HangulTable.Mark.hour(str: hour)
+            + HangulTable.Mark.minute(str: minute)
+
+        markList.forEach {
+            mark[$0.row][$0.col] = true
+        }
+        gridMarks = mark
+    }
+}
+
+private extension HangulTable.Mark {
+    static func midDay(str: String) -> [(row: Int, col: Int)] {
+        let time = Int(str) ?? 0
+        return midDay(hour: time)
+    }
+    static func midNight(str: String) -> [(row: Int, col: Int)] {
+        let time = Int(str) ?? 0
+        return midNight(hour: time)
+    }
+    static func hour(str: String) -> [(row: Int, col: Int)] {
+        let time = Int(str) ?? 0
+        return hour(time)
+    }
+    static func minute(str: String) -> [(row: Int, col: Int)] {
+        let time = Int(str) ?? 0
+        return minute(time)
     }
 }

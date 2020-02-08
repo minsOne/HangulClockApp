@@ -9,6 +9,7 @@
 import RIBs
 import RxSwift
 import RxRelay
+import HangulClockTable
 
 public protocol MainRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
@@ -39,6 +40,14 @@ final class MainInteractor: PresentableInteractor<MainPresentable>, MainInteract
         self.dateFormatService = dateFormatService
         super.init(presenter: presenter)
         presenter.listener = self
+        initialzieViewState()
+    }
+    
+    func initialzieViewState() {
+        let state = presenter.state.value
+        state.gridTexts = HangulTable.texts
+        state.gridMarks = HangulTable.marks
+        presenter.state.accept(state)
     }
 
     override func didBecomeActive() {
@@ -47,10 +56,9 @@ final class MainInteractor: PresentableInteractor<MainPresentable>, MainInteract
         timeIntervalService
             .publishTickTime(interval: .seconds(1))
             .withLatestFrom(presenter.state) { ($0, $1) }
-            .map { [dateFormatService] (date, state) -> ViewState in
-                var new = state
-                new.date = dateFormatService.date(date)
-                return new
+            .map { (date, state) in
+                state.updateDate(date: date)
+                return state
         }
         .debug()
         .observeOn(MainScheduler.instance)

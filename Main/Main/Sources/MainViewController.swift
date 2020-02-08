@@ -20,9 +20,10 @@ public protocol MainPresentableListener: class {
 
 final class MainViewController: UIHostingController<MainView>, MainPresentable, MainViewControllable, ViewStateListner {
     func onAppear() {
-        bind()
+        print(#function)
     }
     
+
     weak var listener: MainPresentableListener?
     
     var state = BehaviorRelay<ViewState>(value: ViewState())
@@ -36,6 +37,7 @@ final class MainViewController: UIHostingController<MainView>, MainPresentable, 
         let rootView = MainView(size: conf.rootViewSize, model: __state)
         super.init(rootView: rootView)
         _state.listener = self
+        self.view.backgroundColor = .black
     }
     
     @objc required dynamic init?(coder aDecoder: NSCoder) {
@@ -48,17 +50,6 @@ final class MainViewController: UIHostingController<MainView>, MainPresentable, 
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-    }
-    
-    private func bind() {
-        #if DEBUG
-        print(#file, #function)
-        #endif
-        state.asDriver()
-            .drive(onNext: { [weak self] (state) in
-                self?._state = state
-            })
-            .disposed(by: disposeBag)
     }
 }
 

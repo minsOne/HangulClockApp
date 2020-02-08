@@ -12,10 +12,10 @@
       location = "container:"
       name = "Core">
       <FileRef
-         location = "group:HangulClockTable/HangulClockTable.xcodeproj">
+         location = "group:FoundationExtension/FoundationExtension.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:ClockTable/ClockTable.xcodeproj">
+         location = "group:HangulClockTable/HangulClockTable.xcodeproj">
       </FileRef>
       <FileRef
          location = "group:Resource/Resource.xcodeproj">

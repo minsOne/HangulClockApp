@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB6871EA23EDC667002FA3C5 /* ClockTable.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6871E823EDC667002FA3C5 /* ClockTable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBEF52FD23EF0C0C00285179 /* FoundationExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = CBEF52FB23EF0C0C00285179 /* FoundationExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBEF530523EF0C2700285179 /* Array+SafeSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEF530423EF0C2700285179 /* Array+SafeSubscript.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CB6871E523EDC667002FA3C5 /* ClockTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClockTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB6871E823EDC667002FA3C5 /* ClockTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClockTable.h; sourceTree = "<group>"; };
-		CB6871E923EDC667002FA3C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBEF52F823EF0C0C00285179 /* FoundationExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoundationExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBEF52FB23EF0C0C00285179 /* FoundationExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundationExtension.h; sourceTree = "<group>"; };
+		CBEF52FC23EF0C0C00285179 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBEF530423EF0C2700285179 /* Array+SafeSubscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+SafeSubscript.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CB6871E223EDC667002FA3C5 /* Frameworks */ = {
+		CBEF52F523EF0C0C00285179 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -27,35 +29,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CB6871DB23EDC667002FA3C5 = {
+		CBEF52EE23EF0C0C00285179 = {
 			isa = PBXGroup;
 			children = (
-				CB6871E723EDC667002FA3C5 /* ClockTable */,
-				CB6871E623EDC667002FA3C5 /* Products */,
+				CBEF52FA23EF0C0C00285179 /* FoundationExtension */,
+				CBEF52F923EF0C0C00285179 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CB6871E623EDC667002FA3C5 /* Products */ = {
+		CBEF52F923EF0C0C00285179 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CB6871E523EDC667002FA3C5 /* ClockTable.framework */,
+				CBEF52F823EF0C0C00285179 /* FoundationExtension.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CB6871E723EDC667002FA3C5 /* ClockTable */ = {
+		CBEF52FA23EF0C0C00285179 /* FoundationExtension */ = {
 			isa = PBXGroup;
 			children = (
-				CB6871F023EDC677002FA3C5 /* Sources */,
-				CB6871E823EDC667002FA3C5 /* ClockTable.h */,
-				CB6871E923EDC667002FA3C5 /* Info.plist */,
+				CBEF530323EF0C1000285179 /* Sources */,
+				CBEF52FB23EF0C0C00285179 /* FoundationExtension.h */,
+				CBEF52FC23EF0C0C00285179 /* Info.plist */,
 			);
-			path = ClockTable;
+			path = FoundationExtension;
 			sourceTree = "<group>";
 		};
-		CB6871F023EDC677002FA3C5 /* Sources */ = {
+		CBEF530323EF0C1000285179 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CBEF530423EF0C2700285179 /* Array+SafeSubscript.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -63,51 +66,51 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		CB6871E023EDC667002FA3C5 /* Headers */ = {
+		CBEF52F323EF0C0C00285179 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB6871EA23EDC667002FA3C5 /* ClockTable.h in Headers */,
+				CBEF52FD23EF0C0C00285179 /* FoundationExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CB6871E423EDC667002FA3C5 /* ClockTable */ = {
+		CBEF52F723EF0C0C00285179 /* FoundationExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CB6871ED23EDC667002FA3C5 /* Build configuration list for PBXNativeTarget "ClockTable" */;
+			buildConfigurationList = CBEF530023EF0C0C00285179 /* Build configuration list for PBXNativeTarget "FoundationExtension" */;
 			buildPhases = (
-				CB6871E023EDC667002FA3C5 /* Headers */,
-				CB6871E123EDC667002FA3C5 /* Sources */,
-				CB6871E223EDC667002FA3C5 /* Frameworks */,
-				CB6871E323EDC667002FA3C5 /* Resources */,
+				CBEF52F323EF0C0C00285179 /* Headers */,
+				CBEF52F423EF0C0C00285179 /* Sources */,
+				CBEF52F523EF0C0C00285179 /* Frameworks */,
+				CBEF52F623EF0C0C00285179 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ClockTable;
-			productName = ClockTable;
-			productReference = CB6871E523EDC667002FA3C5 /* ClockTable.framework */;
+			name = FoundationExtension;
+			productName = FoundationExtension;
+			productReference = CBEF52F823EF0C0C00285179 /* FoundationExtension.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CB6871DC23EDC667002FA3C5 /* Project object */ = {
+		CBEF52EF23EF0C0C00285179 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = minsone;
 				TargetAttributes = {
-					CB6871E423EDC667002FA3C5 = {
+					CBEF52F723EF0C0C00285179 = {
 						CreatedOnToolsVersion = 11.2.1;
 						LastSwiftMigration = 1120;
 					};
 				};
 			};
-			buildConfigurationList = CB6871DF23EDC667002FA3C5 /* Build configuration list for PBXProject "ClockTable" */;
+			buildConfigurationList = CBEF52F223EF0C0C00285179 /* Build configuration list for PBXProject "FoundationExtension" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,18 +118,18 @@
 				en,
 				Base,
 			);
-			mainGroup = CB6871DB23EDC667002FA3C5;
-			productRefGroup = CB6871E623EDC667002FA3C5 /* Products */;
+			mainGroup = CBEF52EE23EF0C0C00285179;
+			productRefGroup = CBEF52F923EF0C0C00285179 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CB6871E423EDC667002FA3C5 /* ClockTable */,
+				CBEF52F723EF0C0C00285179 /* FoundationExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CB6871E323EDC667002FA3C5 /* Resources */ = {
+		CBEF52F623EF0C0C00285179 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -136,17 +139,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CB6871E123EDC667002FA3C5 /* Sources */ = {
+		CBEF52F423EF0C0C00285179 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBEF530523EF0C2700285179 /* Array+SafeSubscript.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		CB6871EB23EDC667002FA3C5 /* Debug */ = {
+		CBEF52FE23EF0C0C00285179 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -197,7 +201,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -209,7 +213,7 @@
 			};
 			name = Debug;
 		};
-		CB6871EC23EDC667002FA3C5 /* Release */ = {
+		CBEF52FF23EF0C0C00285179 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -254,7 +258,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -266,7 +270,7 @@
 			};
 			name = Release;
 		};
-		CB6871EE23EDC667002FA3C5 /* Debug */ = {
+		CBEF530123EF0C0C00285179 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -276,14 +280,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ClockTable/Info.plist;
+				INFOPLIST_FILE = FoundationExtension/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.Hangul.ClockTable;
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.Hangul.FoundationExtension;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -292,7 +297,7 @@
 			};
 			name = Debug;
 		};
-		CB6871EF23EDC667002FA3C5 /* Release */ = {
+		CBEF530223EF0C0C00285179 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -302,14 +307,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ClockTable/Info.plist;
+				INFOPLIST_FILE = FoundationExtension/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.Hangul.ClockTable;
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.Hangul.FoundationExtension;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,25 +326,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CB6871DF23EDC667002FA3C5 /* Build configuration list for PBXProject "ClockTable" */ = {
+		CBEF52F223EF0C0C00285179 /* Build configuration list for PBXProject "FoundationExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CB6871EB23EDC667002FA3C5 /* Debug */,
-				CB6871EC23EDC667002FA3C5 /* Release */,
+				CBEF52FE23EF0C0C00285179 /* Debug */,
+				CBEF52FF23EF0C0C00285179 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CB6871ED23EDC667002FA3C5 /* Build configuration list for PBXNativeTarget "ClockTable" */ = {
+		CBEF530023EF0C0C00285179 /* Build configuration list for PBXNativeTarget "FoundationExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CB6871EE23EDC667002FA3C5 /* Debug */,
-				CB6871EF23EDC667002FA3C5 /* Release */,
+				CBEF530123EF0C0C00285179 /* Debug */,
+				CBEF530223EF0C0C00285179 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CB6871DC23EDC667002FA3C5 /* Project object */;
+	rootObject = CBEF52EF23EF0C0C00285179 /* Project object */;
 }

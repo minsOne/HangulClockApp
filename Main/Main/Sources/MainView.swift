@@ -11,19 +11,6 @@ import PureSwiftUI
 import PureSwiftUITools
 
 public struct MainView {
-    private let gridTexts = [["한", "두", "세", "네", "다", "섯"],
-                             ["여", "섯", "일", "곱", "여", "덟"],
-                             ["아", "홉", "열", "한", "두", "시"],
-                             ["자", "이", "삼", "사", "오", "십"],
-                             ["정", "일", "이", "삼", "사", "육"],
-                             ["오", "오", "칠", "팔", "구", "분"]]
-    @State var turnOnOffGrid: [[Bool]] = [[false, false, false, false, false, false],
-                                          [false, false, false, false, false, false],
-                                          [false, false, false, false, false, false],
-                                          [false, false, false, false, false, false],
-                                          [false, false, false, false, false, false],
-                                          [false, false, false, false, false, false]]
-
     private let size: CGSize
     @ObservedObject var model: ViewState
     
@@ -35,21 +22,14 @@ public struct MainView {
 
 extension MainView: View {
     public var body: some View {
-        return Text("3333")
-            .font(Font.custom("alarmclock", size: 100))
-//        Text(model.date)
-//            .onAppear(perform: model.onAppear)
-//        GridView(6, spacing: 8) { column, row in
-//            ZStack {
-//                TitleText("\(self.gridTexts[row][column])", self.turnOnOffGrid[row][column] ? .red : .black)
-//                    .greedyFrame()
-//                    .shadow(5)
-//                Button(action: {
-//                    self.turnOnOffGrid[row][column].toggle()
-//                }) {
-//                    TitleText("\(self.gridTexts[row][column])", .clear)
-//                }
-//            }
-//        }
+        GridView(model.gridTexts.count, spacing: 8) { column, row in
+            LargeTitleText("\(self.model.gridTexts[row][column])", .white, .bold)
+                .opacity(self.model.gridMarks[row][column] ? 1 : 0.4)
+                .animation(.easeInOut(duration: 0.5))
+                .greedyFrame()
+                .shadow(5)
+        }
+        .frame(size.width, size.height)
+        .onAppear(perform: model.onAppear)
     }
 }

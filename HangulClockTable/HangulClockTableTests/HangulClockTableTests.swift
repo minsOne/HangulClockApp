@@ -175,9 +175,9 @@ class HangulClockTableTests: XCTestCase {
     
     func test_mark_mid_table() {
         let texts = HangulTable.texts
-        XCTAssertEqual(HangulTable.Mark.midDay.map { texts[$0.row][$0.col] }.joined(),
+        XCTAssertEqual(HangulTable.Mark.midDay(hour: 12).map { texts[$0.row][$0.col] }.joined(),
                        "정오")
-        XCTAssertEqual(HangulTable.Mark.midNight.map { texts[$0.row][$0.col] }.joined(),
+        XCTAssertEqual(HangulTable.Mark.midNight(hour: 0).map { texts[$0.row][$0.col] }.joined(),
                        "자정")
     }
 }

@@ -30,16 +30,25 @@ public extension HangulTable {
 }
 
 public extension HangulTable.Mark {
-    static var midDay: [(row: Int, col: Int)] {
-        return [(4,0),(5,0)]
+    static func midDay(hour: Int) -> [(row: Int, col: Int)] {
+        switch hour {
+        case 12: return [(4,0),(5,0)]
+        default: return []
+        }
     }
-    static var midNight: [(row: Int, col: Int)] {
-        return [(3,0),(4,0)]
+    
+    static func midNight(hour: Int) -> [(row: Int, col: Int)] {
+        switch hour {
+        case 0: return [(3,0),(4,0)]
+        default: return []
+        }
     }
+
     static func hour(_ hour: Int) -> [(row: Int, col: Int)] {
         let mark_시 = [(2,5)]
         let mark_시간: [(Int, Int)]
-        switch hour {
+        switch hour % 12 {
+        case 0: mark_시간 = [(2,2),(2,4)]
         case 1: mark_시간 = [(0,0)]
         case 2: mark_시간 = [(0,1)]
         case 3: mark_시간 = [(0,2)]
@@ -51,7 +60,6 @@ public extension HangulTable.Mark {
         case 9: mark_시간 = [(2,0),(2,1)]
         case 10: mark_시간 = [(2,2)]
         case 11: mark_시간 = [(2,2),(2,3)]
-        case 12: mark_시간 = [(2,2),(2,4)]
         default: return []
         }
         return mark_시간 + mark_시
