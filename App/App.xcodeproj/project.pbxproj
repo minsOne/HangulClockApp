@@ -17,7 +17,6 @@
 		CB6871A323EC667E002FA3C5 /* Resource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871A223EC667E002FA3C5 /* Resource.framework */; };
 		CB6871A423EC667E002FA3C5 /* Resource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871A223EC667E002FA3C5 /* Resource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB6871A623EC6686002FA3C5 /* Umbrella.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871A523EC6686002FA3C5 /* Umbrella.framework */; };
-		CB6871BA23EDB1AC002FA3C5 /* Main.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871B923EDB1AC002FA3C5 /* Main.framework */; };
 		CB6871C023EDB25D002FA3C5 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871BF23EDB25D002FA3C5 /* AppComponent.swift */; };
 		CB6871C223EDB4F1002FA3C5 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871C123EDB4F1002FA3C5 /* RxRelay.framework */; };
 		CB6871C323EDB4F1002FA3C5 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871C123EDB4F1002FA3C5 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -73,7 +72,6 @@
 				CB6871C223EDB4F1002FA3C5 /* RxRelay.framework in Frameworks */,
 				CB6871A623EC6686002FA3C5 /* Umbrella.framework in Frameworks */,
 				CB6870C623EC6321002FA3C5 /* RIBs.framework in Frameworks */,
-				CB6871BA23EDB1AC002FA3C5 /* Main.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
