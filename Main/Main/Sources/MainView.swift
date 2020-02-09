@@ -38,7 +38,7 @@ extension MainView: View {
             .frame(size.width-30, size.height-30)
             leftTopLine
             rightBottomLine
-            settingButton
+//            settingButton
         }
         .onAppear(perform: model.onAppear)
     }
