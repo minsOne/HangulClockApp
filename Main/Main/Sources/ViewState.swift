@@ -31,8 +31,9 @@ public class ViewState: ObservableObject {
         let hour = dateFormatter.string(from: date)
         dateFormatter.dateFormat = "mm"
         let minute = dateFormatter.string(from: date)
+        #if DEBUG
         print(#function, today, hour, minute)
-        
+        #endif
         var mark = HangulTable.marks
         let markList = HangulTable.Mark.midDay(str: hour)
             + HangulTable.Mark.midNight(str: hour)

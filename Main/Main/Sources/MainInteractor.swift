@@ -60,7 +60,6 @@ final class MainInteractor: PresentableInteractor<MainPresentable>, MainInteract
                 state.updateDate(date: date)
                 return state
         }
-        .debug()
         .observeOn(MainScheduler.instance)
         .bind(to: presenter.state)
         .disposeOnDeactivate(interactor: self)
