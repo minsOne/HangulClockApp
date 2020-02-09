@@ -23,16 +23,6 @@ public protocol MainPresentableListener: class {
 }
 
 final class MainViewController: UIHostingController<MainView>, MainPresentable, MainViewControllable, ViewStateListner {
-    func tapSettings() {
-        listener?.request(action: .settings)
-        print(#function)
-    }
-    
-    func onAppear() {
-        print(#function)
-    }
-    
-
     weak var listener: MainPresentableListener?
     
     var state = BehaviorRelay<ViewState>(value: ViewState())
@@ -60,13 +50,28 @@ final class MainViewController: UIHostingController<MainView>, MainPresentable, 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
+}
 
+// MARK: - MainViewControllable
+extension MainViewController {
     func present(viewController: ViewControllable) {
         present(viewController.uiviewController, animated: true, completion: nil)
     }
     
     func dismiss(viewController: ViewControllable) {
         viewController.uiviewController.dismiss(animated: true, completion: nil)
+    }
+}
+
+// MARK: - ViewStateListner
+extension MainViewController {
+    func tapSettings() {
+        listener?.request(action: .settings)
+        print(#function)
+    }
+    
+    func onAppear() {
+        print(#function)
     }
 }
 

@@ -20,10 +20,6 @@ public class ViewState: ObservableObject {
     
     weak var listener: ViewStateListner?
     
-    func onAppear() {
-        listener?.onAppear()
-    }
-    
     func updateDate(date: Date) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss"
@@ -40,11 +36,19 @@ public class ViewState: ObservableObject {
             + HangulTable.Mark.midNight(str: hour)
             + HangulTable.Mark.hour(str: hour)
             + HangulTable.Mark.minute(str: minute)
-
+        
         markList.forEach {
             mark[$0.row][$0.col] = true
         }
         gridMarks = mark
+    }
+    
+    func onAppear() {
+        listener?.onAppear()
+    }
+    
+    func tapSettings() {
+        listener?.tapSettings()
     }
 }
 
