@@ -35,30 +35,16 @@ extension MainView: View {
 }
 
 private extension MainView {
-    var portraitText: some View {
-        return HStack {
-            TitleText("\(self.model.date)", .white, .bold)
-                .padding([.top, .leading], 20)
-            Spacer()
-        }
-    }
-    
-    var landscapeText: some View {
-        return HStack {
-            TitleText("\(self.model.year)\n\(self.model.month)\n\(self.model.day)", .white, .bold)
-                .padding(EdgeInsets.init(20, 10, 0, 0))
-            Spacer()
-        }
-    }
-    
     var dateText: some View {
         func geometryProxy(_ geometry: GeometryProxy) -> some View {
             let size = geometry.size
             return Group {
                 if size.height > size.width {
-                    portraitText
+                    PortraitDateTextView(date: $model.date)
                 } else {
-                    landscapeText
+                    LandscapeDateTextView(year: $model.year,
+                                          month: $model.month,
+                                          day: $model.day)
                 }
             }
         }
@@ -148,6 +134,32 @@ private extension MainView {
             }
             .fillColor(Color.white)
             .frame(size)
+            Spacer()
+        }
+    }
+}
+
+private struct PortraitDateTextView: View {
+    @Binding var date: String
+    
+    var body: some View {
+        return HStack {
+            TitleText("\(date)", .white, .bold)
+                .padding([.top, .leading], 20)
+            Spacer()
+        }
+    }
+}
+
+private struct LandscapeDateTextView: View {
+    @Binding var year: String
+    @Binding var month: String
+    @Binding var day: String
+    
+    var body: some View {
+        return HStack {
+            TitleText("\(year)\n\(month)\n\(day)", .white, .bold)
+                .padding(EdgeInsets.init(20, 10, 0, 0))
             Spacer()
         }
     }
