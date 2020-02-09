@@ -37,7 +37,7 @@ extension MainView: View {
 private extension MainView {
     var portraitText: some View {
         return HStack {
-            TitleText("\(self.model.today)", .white, .bold)
+            TitleText("\(self.model.date)", .white, .bold)
                 .padding([.top, .leading], 20)
             Spacer()
         }
@@ -45,7 +45,7 @@ private extension MainView {
     
     var landscapeText: some View {
         return HStack {
-            TitleText("\(self.model.today)", .white, .regular)
+            TitleText("\(self.model.year)\n\(self.model.month)\n\(self.model.day)", .white, .bold)
                 .padding(EdgeInsets.init(20, 10, 0, 0))
             Spacer()
         }

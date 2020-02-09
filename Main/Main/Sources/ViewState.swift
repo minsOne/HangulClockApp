@@ -17,7 +17,11 @@ protocol ViewStateListner: class {
 public class ViewState: ObservableObject {
     @Published var gridTexts: [[String]] = []
     @Published var gridMarks: [[Bool]] = []
-    @Published var today: String = ""
+    @Published var date: String = ""
+    @Published var year: String = ""
+    @Published var month: String = ""
+    @Published var day: String = ""
+    
     
     weak var listener: ViewStateListner?
     
@@ -33,13 +37,16 @@ public class ViewState: ObservableObject {
         let time = dateFormatter.string(from: date)
         dateFormatter.dateFormat = "HH"
         let hour = dateFormatter.string(from: date)
-        dateFormatter.dateFormat = "ss"
+        dateFormatter.dateFormat = "mm"
         let minute = dateFormatter.string(from: date)
         #if DEBUG
         print(#function, year, month, day, time, hour, minute)
         #endif
         
-        self.today = "\(year)년 \(Int(month) ?? 0)월 \(Int(day) ?? 0)일"
+        self.date = "\(year)년 \(Int(month) ?? 0)월 \(Int(day) ?? 0)일"
+        self.year = "\(year)년"
+        self.month = "\(Int(month) ?? 0)월"
+        self.day = "\(Int(day) ?? 0)일"
         
         var mark = HangulTable.marks
         let markList = HangulTable.Mark.midDay(str: hour)
