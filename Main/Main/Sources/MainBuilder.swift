@@ -7,6 +7,7 @@
 //
 
 import RIBs
+import Settings
 
 public protocol MainDependency: Dependency {
     var timeIntervalService: TimeIntervalServicable { get }
@@ -22,7 +23,7 @@ public extension MainDependency {
     }
 }
 
-final class MainComponent: Component<MainDependency> {
+final class MainComponent: Component<MainDependency>, SettingsDependency {
 
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
     fileprivate let timeIntervalService: TimeIntervalServicable
@@ -50,10 +51,12 @@ public final class MainBuilder: Builder<MainDependency>, MainBuildable {
     public func build() -> LaunchRouting {
         let component = MainComponent(dependency: dependency)
         let viewController = MainViewController()
+        let settingsBuilder = SettingsBuilder(dependency: component)
         let interactor = MainInteractor(presenter: viewController,
                                         timeIntervalService: component.timeIntervalService,
                                         dateFormatService: component.dateFormatService)
         return MainRouter(interactor: interactor,
+                          settingsBuilder: settingsBuilder,
                           viewController: viewController)
     }
 }

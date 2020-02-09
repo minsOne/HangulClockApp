@@ -11,12 +11,27 @@ import RxSwift
 import UIKit
 
 public protocol SettingsPresentableListener: class {
-    // TODO: Declare properties and methods that the view controller can invoke to perform
-    // business logic, such as signIn(). This protocol is implemented by the corresponding
-    // interactor class.
+    func finishSettings()
 }
 
 final class SettingsViewController: UIViewController, SettingsPresentable, SettingsViewControllable {
 
     weak var listener: SettingsPresentableListener?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#function)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        guard isBeingDismissed || isMovingFromParent else { return }
+        listener?.finishSettings()
+    }
 }

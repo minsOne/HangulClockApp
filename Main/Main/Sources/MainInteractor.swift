@@ -13,6 +13,8 @@ import HangulClockTable
 
 public protocol MainRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func routeToSettings()
+    func detachSettings()
 }
 
 public protocol MainPresentable: Presentable {
@@ -27,7 +29,6 @@ public protocol MainListener: class {
 }
 
 final class MainInteractor: PresentableInteractor<MainPresentable>, MainInteractable, MainPresentableListener {
-
     weak var router: MainRouting?
     weak var listener: MainListener?
 
@@ -67,6 +68,16 @@ final class MainInteractor: PresentableInteractor<MainPresentable>, MainInteract
 
     override func willResignActive() {
         super.willResignActive()
+    }
+    
+    func request(action: MainPresentableAction) {
+        switch action {
+        case .settings: router?.routeToSettings()
+        }
+    }
+    
+    func finishSettings() {
+        router?.detachSettings()
     }
     
     // MARK: Private

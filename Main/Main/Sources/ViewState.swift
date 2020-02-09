@@ -11,6 +11,7 @@ import HangulClockTable
 
 protocol ViewStateListner: class {
     func onAppear()
+    func tapSettings()
 }
 
 public class ViewState: ObservableObject {

@@ -22,15 +22,32 @@ public struct MainView {
 
 extension MainView: View {
     public var body: some View {
-        GridView(model.gridTexts.count, spacing: 8) { column, row in
-            LargeTitleText("\(self.model.gridTexts[row][column])", .white, .bold)
-                .opacity(self.model.gridMarks[row][column] ? 1 : 0.4)
-                .animation(.easeInOut(duration: 0.5))
-                .greedyFrame()
-//                .shadowIf(self.model.gridMarks[row][column], color: .white, radius: 10)
-//                .shadowColor(.white, 5)
+        ZStack {
+            GridView(model.gridTexts.count, spacing: 8) { column, row in
+                LargeTitleText("\(self.model.gridTexts[row][column])", .white, .bold)
+                    .opacity(self.model.gridMarks[row][column] ? 1 : 0.4)
+                    .animation(.easeInOut(duration: 0.5))
+                    .greedyFrame()
+            }
+            .frame(size.width, size.height)
+            
+            settingButton
         }
-        .frame(size.width, size.height)
         .onAppear(perform: model.onAppear)
+    }
+    
+    private var settingButton: some View {
+        VStack(alignment: .trailing) {
+            Spacer()
+            HStack {
+                Spacer()
+            }
+            Image(systemName: "gear")
+                .foregroundColor(.white)
+                .font(Font.system(.title).bold())
+                .padding(.trailing, 20)
+                .onTapGesture(perform: model.tapSettings)
+        }
+        
     }
 }

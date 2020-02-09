@@ -14,11 +14,20 @@ import UIKit
 import SwiftUI
 import PureSwiftUI
 
+public enum MainPresentableAction {
+    case settings
+}
+
 public protocol MainPresentableListener: class {
-    
+    func request(action: MainPresentableAction)
 }
 
 final class MainViewController: UIHostingController<MainView>, MainPresentable, MainViewControllable, ViewStateListner {
+    func tapSettings() {
+        listener?.request(action: .settings)
+        print(#function)
+    }
+    
     func onAppear() {
         print(#function)
     }
@@ -50,6 +59,14 @@ final class MainViewController: UIHostingController<MainView>, MainPresentable, 
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+
+    func present(viewController: ViewControllable) {
+        present(viewController.uiviewController, animated: true, completion: nil)
+    }
+    
+    func dismiss(viewController: ViewControllable) {
+        viewController.uiviewController.dismiss(animated: true, completion: nil)
     }
 }
 

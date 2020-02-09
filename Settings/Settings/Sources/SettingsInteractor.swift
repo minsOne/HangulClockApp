@@ -20,10 +20,10 @@ public protocol SettingsPresentable: Presentable {
 
 public protocol SettingsListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func finishSettings()
 }
 
 final class SettingsInteractor: PresentableInteractor<SettingsPresentable>, SettingsInteractable, SettingsPresentableListener {
-
     weak var router: SettingsRouting?
     weak var listener: SettingsListener?
 
@@ -42,5 +42,9 @@ final class SettingsInteractor: PresentableInteractor<SettingsPresentable>, Sett
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
+    }
+    
+    func finishSettings() {
+        listener?.finishSettings()
     }
 }
