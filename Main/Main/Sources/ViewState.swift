@@ -17,20 +17,30 @@ protocol ViewStateListner: class {
 public class ViewState: ObservableObject {
     @Published var gridTexts: [[String]] = []
     @Published var gridMarks: [[Bool]] = []
+    @Published var today: String = ""
     
     weak var listener: ViewStateListner?
     
     func updateDate(date: Date) {
         let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy"
+        let year = dateFormatter.string(from: date)
+        dateFormatter.dateFormat = "MM"
+        let month = dateFormatter.string(from: date)
+        dateFormatter.dateFormat = "dd"
+        let day = dateFormatter.string(from: date)
         dateFormatter.dateFormat = "HH:mm:ss"
-        let today = dateFormatter.string(from: date)
+        let time = dateFormatter.string(from: date)
         dateFormatter.dateFormat = "HH"
         let hour = dateFormatter.string(from: date)
-        dateFormatter.dateFormat = "mm"
+        dateFormatter.dateFormat = "ss"
         let minute = dateFormatter.string(from: date)
         #if DEBUG
-        print(#function, today, hour, minute)
+        print(#function, year, month, day, time, hour, minute)
         #endif
+        
+        self.today = "\(year)년 \(Int(month) ?? 0)월 \(Int(day) ?? 0)일"
+        
         var mark = HangulTable.marks
         let markList = HangulTable.Mark.midDay(str: hour)
             + HangulTable.Mark.midNight(str: hour)

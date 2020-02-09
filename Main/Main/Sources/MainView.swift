@@ -24,26 +24,72 @@ public struct MainView {
 extension MainView: View {
     public var body: some View {
         ZStack {
-            GridView(model.gridTexts.count, spacing: 8) { column, row in
-                LargeTitleText("\(self.model.gridTexts[row][column])", .white, .bold)
-                    .opacity(self.model.gridMarks[row][column] ? 1 : 0.4)
-                    .animation(.easeInOut(duration: 0.5))
-                    .greedyFrame()
-            }
-            .onTapGesture {
-                withAnimation(.easeInOut) {
-                    self.isVisibleSettingButton.toggle()
-                }
-            }
-            .frame(size.width-30, size.height-30)
+            dateText
+            hangulClock
             leftTopLine
             rightBottomLine
-//            settingButton
+            //            settingButton
         }
         .onAppear(perform: model.onAppear)
     }
+}
+
+private extension MainView {
+    var portraitText: some View {
+        return HStack {
+            TitleText("\(self.model.today)", .white, .bold)
+                .padding([.top, .leading], 20)
+            Spacer()
+        }
+    }
     
-    private var settingButton: some View {
+    var landscapeText: some View {
+        return HStack {
+            TitleText("\(self.model.today)", .white, .regular)
+                .padding(EdgeInsets.init(20, 10, 0, 0))
+            Spacer()
+        }
+    }
+    
+    var dateText: some View {
+        func geometryProxy(_ geometry: GeometryProxy) -> some View {
+            let size = geometry.size
+            return Group {
+                if size.height > size.width {
+                    portraitText
+                } else {
+                    landscapeText
+                }
+            }
+        }
+        return VStack(alignment: .leading) {
+            GeometryReader { geometry in
+                geometryProxy(geometry)
+                Spacer()
+            }
+        }
+    }
+}
+
+private extension MainView {
+    var hangulClock: some View {
+        GridView(model.gridTexts.count, spacing: 8) { column, row in
+            LargeTitleText("\(self.model.gridTexts[row][column])", .white, self.model.gridMarks[row][column] ? .bold : .regular)
+                .opacity(self.model.gridMarks[row][column] ? 1 : 0.4)
+                .animation(.easeInOut(duration: 0.5))
+                .greedyFrame()
+        }
+        .onTapGesture {
+            withAnimation(.easeInOut) {
+                self.isVisibleSettingButton.toggle()
+            }
+        }
+        .frame(size.width-30, size.height-30)
+    }
+}
+
+private extension MainView {
+    var settingButton: some View {
         VStack(alignment: .trailing) {
             Spacer()
             HStack {
@@ -55,11 +101,12 @@ extension MainView: View {
                 .padding(.trailing, 20)
                 .onTapGesture(perform: model.tapSettings)
                 .opacity(isVisibleSettingButton ? 1 : 0)
-            
         }
     }
-    
-    private var leftTopLine: some View {
+}
+
+private extension MainView {
+    var leftTopLine: some View {
         VStack() {
             Spacer()
             Path { path in
@@ -82,7 +129,7 @@ extension MainView: View {
         }
     }
     
-    private var rightBottomLine: some View {
+    var rightBottomLine: some View {
         VStack() {
             Spacer()
             Path { path in
