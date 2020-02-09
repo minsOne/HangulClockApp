@@ -3,16 +3,16 @@
     "pins": [
       {
         "package": "PureSwiftUI",
-        "repositoryURL": "https://github.com/CodeSlicing/pure-swift-ui",
+        "repositoryURL": "git@github.com:CodeSlicing/pure-swift-ui.git",
         "state": {
           "branch": null,
-          "revision": "8699e207b2cbdb0efcf8c8e8c61c6f7a940051cd",
-          "version": "1.12.0"
+          "revision": "47eff7138b4551900fbe18a60ae33c37fc7441f3",
+          "version": "1.13.1"
         }
       },
       {
         "package": "PureSwiftUITools",
-        "repositoryURL": "https://github.com/CodeSlicing/pure-swift-ui-tools",
+        "repositoryURL": "git@github.com:CodeSlicing/pure-swift-ui-tools.git",
         "state": {
           "branch": null,
           "revision": "eccdd5e6d1393a0260dc3c3e541fe7b3790892aa",

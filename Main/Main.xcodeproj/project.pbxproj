@@ -367,7 +367,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.Hangul.Main;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.Hangul.Feature.Main;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -394,7 +394,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.Hangul.Main;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.Hangul.Feature.Main;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
