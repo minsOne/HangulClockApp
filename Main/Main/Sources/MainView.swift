@@ -13,6 +13,7 @@ import PureSwiftUITools
 public struct MainView {
     private let size: CGSize
     @ObservedObject var model: ViewState
+    @State var isVisibleSettingButton: Bool = false
     
     public init(size: CGSize, model: ObservedObject<ViewState>) {
         self.size = size
@@ -29,8 +30,14 @@ extension MainView: View {
                     .animation(.easeInOut(duration: 0.5))
                     .greedyFrame()
             }
-            .frame(size.width, size.height)
-            
+            .onTapGesture {
+                withAnimation(.easeInOut) {
+                    self.isVisibleSettingButton.toggle()
+                }
+            }
+            .frame(size.width-30, size.height-30)
+            leftTopLine
+            rightBottomLine
             settingButton
         }
         .onAppear(perform: model.onAppear)
@@ -47,7 +54,54 @@ extension MainView: View {
                 .font(Font.system(.title).bold())
                 .padding(.trailing, 20)
                 .onTapGesture(perform: model.tapSettings)
+                .opacity(isVisibleSettingButton ? 1 : 0)
+            
         }
-        
+    }
+    
+    private var leftTopLine: some View {
+        VStack() {
+            Spacer()
+            Path { path in
+                let width = min(size.width, size.height)
+                let spacing: CGFloat = 7
+                let len = width / 5 / 2
+                path.addLines([
+                    CGPoint(x: 0, y: 0),
+                    CGPoint(x: 0, y: len),
+                    CGPoint(x: spacing, y: len),
+                    CGPoint(x: spacing, y: spacing),
+                    CGPoint(x: len, y: spacing),
+                    CGPoint(x: len, y: 0),
+                    CGPoint(x: 0, y: 0)
+                ])
+            }
+            .fillColor(Color.white)
+            .frame(size)
+            Spacer()
+        }
+    }
+    
+    private var rightBottomLine: some View {
+        VStack() {
+            Spacer()
+            Path { path in
+                let width = min(size.width, size.height)
+                let spacing: CGFloat = 7
+                let len = width / 5 / 2
+                path.addLines([
+                    CGPoint(x: width, y: width),
+                    CGPoint(x: width, y: width-len),
+                    CGPoint(x: width-spacing, y: width-len),
+                    CGPoint(x: width-spacing, y: width-spacing),
+                    CGPoint(x: width-len, y: width-spacing),
+                    CGPoint(x: width-len, y: width),
+                    CGPoint(x: width, y: width),
+                ])
+            }
+            .fillColor(Color.white)
+            .frame(size)
+            Spacer()
+        }
     }
 }
