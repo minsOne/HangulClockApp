@@ -30,7 +30,7 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		CB4EF11323F0575E00D4D5A4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
@@ -139,8 +139,8 @@
 				CB6870A823EC604F002FA3C5 /* Sources */,
 				CB6870A923EC604F002FA3C5 /* Frameworks */,
 				CB6870AA23EC604F002FA3C5 /* Resources */,
-				CBEF536F23EFBFBA00285179 /* Run Script */,
 				CB4EF11323F0575E00D4D5A4 /* Embed Frameworks */,
+				CBEF536F23EFBFBA00285179 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -205,15 +205,23 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/../Carthage/Build/iOS/RIBs.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/RxRelay.framework",
 			);
 			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RIBs.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"$CONFIGURATION\" == \"Debug\" ]; \n  echo \"skip carthage copy-frameworks\"\nthen\n  /usr/local/bin/carthage copy-frameworks\nfi\n";
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Release\" ]; then\n  /usr/local/bin/carthage copy-frameworks\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
