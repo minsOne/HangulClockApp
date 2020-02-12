@@ -38,7 +38,7 @@ final class MainViewController: MainPresentable, MainViewControllable, ViewState
     init() {
         self._state = state.value
         let conf = Configure()
-        let rootView = MainView(size: conf.rootViewSize, model: __state)
+        let rootView = MainView(size: conf.rootViewSize, state: __state)
         self.hostingController = UIHostingController(rootView: rootView)
         _state.listener = self
         hostingController.view.backgroundColor = .black

@@ -12,12 +12,12 @@ import PureSwiftUITools
 
 public struct MainView {
     private let size: CGSize
-    @ObservedObject var model: ViewState
+    @ObservedObject var state: ViewState
     @State var isVisibleSettingButton: Bool = false
     
-    public init(size: CGSize, model: ObservedObject<ViewState>) {
+    public init(size: CGSize, state: ObservedObject<ViewState>) {
         self.size = size
-        self._model = model
+        self._state = state
     }
 }
 
@@ -31,7 +31,7 @@ extension MainView: View {
             CornerLineView.BottomRight(size: self.size)
             //            settingButton
         }
-        .onAppear(perform: model.onAppear)
+        .onAppear(perform: state.onAppear)
     }
 }
 
@@ -41,11 +41,11 @@ private extension MainView {
             let size = geometry.size
             return Group {
                 if size.height > size.width {
-                    DateTextView.Portrait(date: $model.date)
+                    DateTextView.Portrait(date: $state.date)
                 } else {
-                    DateTextView.Landscape(year: $model.year,
-                                           month: $model.month,
-                                           day: $model.day)
+                    DateTextView.Landscape(year: $state.year,
+                                           month: $state.month,
+                                           day: $state.day)
                 }
             }
         }
@@ -60,9 +60,9 @@ private extension MainView {
 
 private extension MainView {
     var hangulClock: some View {
-        GridView(model.gridTexts.count, spacing: 8) { column, row in
-            LargeTitleText("\(self.model.gridTexts[row][column])", .white, self.model.gridMarks[row][column] ? .bold : .regular)
-                .opacity(self.model.gridMarks[row][column] ? 1 : 0.4)
+        GridView(state.gridTexts.count, spacing: 8) { column, row in
+            LargeTitleText("\(self.state.gridTexts[row][column])", .white, self.state.gridMarks[row][column] ? .bold : .regular)
+                .opacity(self.state.gridMarks[row][column] ? 1 : 0.4)
                 .animation(.easeInOut(duration: 0.5))
                 .greedyFrame()
         }
@@ -86,7 +86,7 @@ private extension MainView {
                 .foregroundColor(.white)
                 .font(Font.system(.title).bold())
                 .padding(.trailing, 20)
-                .onTapGesture(perform: model.tapSettings)
+                .onTapGesture(perform: state.tapSettings)
                 .opacity(isVisibleSettingButton ? 1 : 0)
         }
     }
