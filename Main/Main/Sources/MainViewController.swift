@@ -22,40 +22,39 @@ public protocol MainPresentableListener: class {
     func request(action: MainPresentableAction)
 }
 
-final class MainViewController: UIHostingController<MainView>, MainPresentable, MainViewControllable, ViewStateListner {
+final class MainViewController: MainPresentable, MainViewControllable, ViewStateListner {
+    var uiviewController: UIViewController {
+        return hostingController
+    }
+    
     weak var listener: MainPresentableListener?
     
     var state = BehaviorRelay<ViewState>(value: ViewState())
     @ObservedObject private var _state: ViewState
 
     private let disposeBag = DisposeBag()
+    private let hostingController: UIHostingController<MainView>
     
     init() {
         self._state = state.value
         let conf = Configure()
         let rootView = MainView(size: conf.rootViewSize, model: __state)
-        super.init(rootView: rootView)
+        self.hostingController = UIHostingController(rootView: rootView)
         _state.listener = self
-        self.view.backgroundColor = .black
+        hostingController.view.backgroundColor = .black
     }
     
     @objc required dynamic init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
     }
 }
 
 // MARK: - MainViewControllable
 extension MainViewController {
     func present(viewController: ViewControllable) {
-        present(viewController.uiviewController, animated: true, completion: nil)
+        self.uiviewController.present(viewController.uiviewController,
+                                      animated: true,
+                                      completion: nil)
     }
     
     func dismiss(viewController: ViewControllable) {
