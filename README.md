@@ -1,4 +1,5 @@
-Copyright. 2017 MR.LEE(LEE SANG HUN) / 이 프로그램은 저작권으로 보호됩니다.
+<!--Copyright. 2017 MR.LEE(LEE SANG HUN) / 이 프로그램은 저작권으로 보호됩니다. -->
+원작자분 협의 예정
 
 # 한글시계 - 오늘도 수고한 당신에게 for iOS
 
@@ -14,5 +15,8 @@ iOS 13.0+
 추후 지원 예정입니다.
 
 ## 라이센스
+원작자분 협의 예정
+<!-- 
 GPLv3(GNU General Public License v3)
 Based on Uberchlet
+-->
