@@ -35,17 +35,60 @@ final class MainViewController: MainPresentable, MainViewControllable, ViewState
     private let disposeBag = DisposeBag()
     private let hostingController: UIHostingController<MainView>
     
-    init() {
+    init(bgColor: UIColor) {
         self._state = state.value
         let conf = Configure()
         let rootView = MainView(size: conf.rootViewSize, state: __state)
         self.hostingController = UIHostingController(rootView: rootView)
         _state.listener = self
-        hostingController.view.backgroundColor = .black
+        hostingController.view.backgroundColor = bgColor
+        addPanGesuture()
     }
     
     @objc required dynamic init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func updateBackgroundColor(_ color: UIColor) {
+        hostingController.view.backgroundColor = color
+    }
+    
+    private var lastTranslation: CGPoint?
+    
+    func addPanGesuture() {
+        let selector = #selector(displayGestureForPanGestureRecognizer)
+        let pan = UIPanGestureRecognizer( target: self, action: selector)
+        hostingController.view.addGestureRecognizer(pan)
+    }
+    
+    @objc func displayGestureForPanGestureRecognizer(sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: hostingController.view)
+        
+        switch sender.state {
+        case .began:
+            lastTranslation = translation
+        case .changed:
+            changeViewAlpha(nowPoint: translation)
+        case .cancelled, .ended, .failed, .possible:
+            fallthrough
+        default:
+            lastTranslation = nil
+        }
+    }
+    
+    func changeViewAlpha(nowPoint: CGPoint) {
+        defer { lastTranslation = nowPoint }
+        
+        guard
+            let lastPoint = lastTranslation,
+            case let alpha = hostingController.view.alpha
+            else { return }
+        
+        if lastPoint.y > nowPoint.y && alpha < 1.0 {
+            hostingController.view.alpha = alpha + 0.01
+        } else if lastPoint.y < nowPoint.y && alpha >= 0.02 {
+            hostingController.view.alpha = alpha - 0.01
+        }
     }
 }
 

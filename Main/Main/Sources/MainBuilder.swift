@@ -8,10 +8,12 @@
 
 import RIBs
 import Settings
+import Resource
 
 public protocol MainDependency: Dependency {
     var timeIntervalService: TimeIntervalServicable { get }
     var dateFormatService: DateFormatServicable { get }
+    var bgColor: UIColor { get }
 }
 
 public extension MainDependency {
@@ -24,14 +26,18 @@ public extension MainDependency {
 }
 
 final class MainComponent: Component<MainDependency>, SettingsDependency {
+    var colors: [R.Color] {
+        R.ThemeColor.list
+    }
 
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
     fileprivate let timeIntervalService: TimeIntervalServicable
     fileprivate let dateFormatService: DateFormatServicable
+    fileprivate let bgColor: UIColor
     
     override init(dependency: MainDependency) {
         self.timeIntervalService = dependency.timeIntervalService
         self.dateFormatService = dependency.dateFormatService
+        self.bgColor = dependency.bgColor
         super.init(dependency: dependency)
     }
 }
@@ -50,7 +56,7 @@ public final class MainBuilder: Builder<MainDependency>, MainBuildable {
 
     public func build() -> LaunchRouting {
         let component = MainComponent(dependency: dependency)
-        let viewController = MainViewController()
+        let viewController = MainViewController(bgColor: component.bgColor)
         let settingsBuilder = SettingsBuilder(dependency: component)
         let interactor = MainInteractor(presenter: viewController,
                                         timeIntervalService: component.timeIntervalService,

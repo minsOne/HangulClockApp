@@ -12,28 +12,22 @@ import RxRelay
 import HangulClockTable
 
 public protocol MainRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
     func routeToSettings()
     func detachSettings()
 }
 
 public protocol MainPresentable: Presentable {
     var listener: MainPresentableListener? { get set }
-    // TODO: Declare methods the interactor can invoke the presenter to present data.
-    
     var state: BehaviorRelay<ViewState> { get }
+    func updateBackgroundColor(_ color: UIColor)
 }
 
-public protocol MainListener: class {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
-}
+public protocol MainListener: class {}
 
 final class MainInteractor: PresentableInteractor<MainPresentable>, MainInteractable, MainPresentableListener {
     weak var router: MainRouting?
     weak var listener: MainListener?
 
-    // TODO: Add additional dependencies to constructor. Do not perform any logic
-    // in constructor.
     init(presenter: MainPresentable,
          timeIntervalService: TimeIntervalServicable,
          dateFormatService: DateFormatServicable) {
@@ -78,6 +72,10 @@ final class MainInteractor: PresentableInteractor<MainPresentable>, MainInteract
     
     func finishSettings() {
         router?.detachSettings()
+    }
+    
+    func updateBackgroundColor(color: UIColor) {
+        presenter.updateBackgroundColor(color)
     }
     
     // MARK: Private

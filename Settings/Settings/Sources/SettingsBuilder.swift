@@ -7,15 +7,18 @@
 //
 
 import RIBs
+import Resource
 
 public protocol SettingsDependency: Dependency {
-    // TODO: Declare the set of dependencies required by this RIB, but cannot be
-    // created by this RIB.
+    var colors: [R.Color] { get }
 }
 
 final class SettingsComponent: Component<SettingsDependency> {
-
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+    fileprivate let colors: [R.Color]
+    override init(dependency: SettingsDependency) {
+        self.colors = dependency.colors
+        super.init(dependency: dependency)
+    }
 }
 
 // MARK: - Builder
@@ -32,7 +35,8 @@ public final class SettingsBuilder: Builder<SettingsDependency>, SettingsBuildab
 
     public func build(withListener listener: SettingsListener) -> SettingsRouting {
         let component = SettingsComponent(dependency: dependency)
-        let viewController = SettingsViewController()
+        let viewState = SettingsViewState(colors: component.colors)
+        let viewController = SettingsViewController(viewState: viewState)
         let interactor = SettingsInteractor(presenter: viewController)
         interactor.listener = listener
         return SettingsRouter(interactor: interactor, viewController: viewController)

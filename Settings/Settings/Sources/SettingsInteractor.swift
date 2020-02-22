@@ -8,19 +8,17 @@
 
 import RIBs
 import RxSwift
+import Resource
 
-public protocol SettingsRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
-}
+public protocol SettingsRouting: ViewableRouting {}
 
 public protocol SettingsPresentable: Presentable {
     var listener: SettingsPresentableListener? { get set }
-    // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
 public protocol SettingsListener: class {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
     func finishSettings()
+    func updateBackgroundColor(color: UIColor)
 }
 
 final class SettingsInteractor: PresentableInteractor<SettingsPresentable>, SettingsInteractable, SettingsPresentableListener {
@@ -46,5 +44,10 @@ final class SettingsInteractor: PresentableInteractor<SettingsPresentable>, Sett
     
     func finishSettings() {
         listener?.finishSettings()
+    }
+    
+    func select(themeColor color: R.Color) {
+        listener?.updateBackgroundColor(color: color.color)
+        R.ThemeColor.saveColor(color)
     }
 }

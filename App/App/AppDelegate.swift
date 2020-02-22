@@ -11,6 +11,8 @@ import RIBs
 import Main
 import Resource
 import Logger
+import MetricKit
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -21,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        configure()
+        startConfigure(with: application)
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
@@ -33,8 +35,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    private func configure() {
+    private func startConfigure(with application: UIApplication) {
         Logger.Firebase.register()
+        application.isIdleTimerDisabled = true
+        
+        if #available(iOS 13.0, *) {
+            MXMetricManager.shared.add(self)
+        }
+        
+    }
+    
+    private func finishConfigure(with application: UIApplication) {
+        if #available(iOS 13.0, *) {
+            MXMetricManager.shared.remove(self)
+        }
+    }
+
+}
+
+extension AppDelegate: MXMetricManagerSubscriber {
+    @available(iOS 13.0, *)
+    func didReceive(_ payloads: [MXMetricPayload]) {
+        
     }
 }
 

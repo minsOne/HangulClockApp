@@ -13,7 +13,6 @@ import PureSwiftUITools
 public struct MainView {
     private let size: CGSize
     @ObservedObject var state: ViewState
-    @State var isVisibleSettingButton: Bool = false
     
     public init(size: CGSize, state: ObservedObject<ViewState>) {
         self.size = size
@@ -29,9 +28,11 @@ extension MainView: View {
             
             CornerLineView.TopLeft(size: self.size)
             CornerLineView.BottomRight(size: self.size)
-            //            settingButton
+            settingButton
         }
         .onAppear(perform: state.onAppear)
+        .onDisappear(perform: state.onDisappear)
+        .onTapGesture(perform: state.tapView)
     }
 }
 
@@ -66,11 +67,6 @@ private extension MainView {
                 .animation(.easeInOut(duration: 0.5))
                 .greedyFrame()
         }
-        .onTapGesture {
-            withAnimation(.easeInOut) {
-                self.isVisibleSettingButton.toggle()
-            }
-        }
         .frame(size.width-30, size.height-30)
     }
 }
@@ -87,7 +83,7 @@ private extension MainView {
                 .font(Font.system(.title).bold())
                 .padding(.trailing, 20)
                 .onTapGesture(perform: state.tapSettings)
-                .opacity(isVisibleSettingButton ? 1 : 0)
+                .opacity(state.isVisibleSettingsButton ? 1 : 0)
         }
     }
 }

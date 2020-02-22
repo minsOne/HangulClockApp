@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB320DE223FFBFE900E2F8C3 /* R+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB320DE123FFBFE900E2F8C3 /* R+Color.swift */; };
+		CB320DE423FFC01100E2F8C3 /* R.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB320DE323FFC01100E2F8C3 /* R.swift */; };
+		CB320DEA23FFC1F200E2F8C3 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB320DE923FFC1F200E2F8C3 /* Color+Extension.swift */; };
+		CB320DED23FFC38F00E2F8C3 /* R+ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB320DEC23FFC38F00E2F8C3 /* R+ThemeColor.swift */; };
+		CB320DEF23FFC8F000E2F8C3 /* R+ColorStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB320DEE23FFC8F000E2F8C3 /* R+ColorStorage.swift */; };
 		CB68716523EC6464002FA3C5 /* Resource.h in Headers */ = {isa = PBXBuildFile; fileRef = CB68716323EC6464002FA3C5 /* Resource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB68720123EEA098002FA3C5 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68720023EEA098002FA3C5 /* Font.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB320DE123FFBFE900E2F8C3 /* R+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "R+Color.swift"; sourceTree = "<group>"; };
+		CB320DE323FFC01100E2F8C3 /* R.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
+		CB320DE923FFC1F200E2F8C3 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		CB320DEC23FFC38F00E2F8C3 /* R+ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "R+ThemeColor.swift"; sourceTree = "<group>"; };
+		CB320DEE23FFC8F000E2F8C3 /* R+ColorStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "R+ColorStorage.swift"; sourceTree = "<group>"; };
 		CB68716023EC6464002FA3C5 /* Resource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Resource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB68716323EC6464002FA3C5 /* Resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resource.h; sourceTree = "<group>"; };
 		CB68716423EC6464002FA3C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB68720023EEA098002FA3C5 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB320DE823FFC1E600E2F8C3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CB320DE923FFC1F200E2F8C3 /* Color+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CB320DEB23FFC38400E2F8C3 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				CB320DE123FFBFE900E2F8C3 /* R+Color.swift */,
+				CB320DEC23FFC38F00E2F8C3 /* R+ThemeColor.swift */,
+				CB320DEE23FFC8F000E2F8C3 /* R+ColorStorage.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
 		CB68715623EC6464002FA3C5 = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +84,9 @@
 		CB68716B23EC646F002FA3C5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				CB68720023EEA098002FA3C5 /* Font.swift */,
+				CB320DE823FFC1E600E2F8C3 /* Extension */,
+				CB320DE323FFC01100E2F8C3 /* R.swift */,
+				CB320DEB23FFC38400E2F8C3 /* Color */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -143,7 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB68720123EEA098002FA3C5 /* Font.swift in Sources */,
+				CB320DED23FFC38F00E2F8C3 /* R+ThemeColor.swift in Sources */,
+				CB320DEF23FFC8F000E2F8C3 /* R+ColorStorage.swift in Sources */,
+				CB320DE423FFC01100E2F8C3 /* R.swift in Sources */,
+				CB320DE223FFBFE900E2F8C3 /* R+Color.swift in Sources */,
+				CB320DEA23FFC1F200E2F8C3 /* Color+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

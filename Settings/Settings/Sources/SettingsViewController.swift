@@ -9,29 +9,37 @@
 import RIBs
 import RxSwift
 import UIKit
+import SwiftUI
+import Resource
 
 public protocol SettingsPresentableListener: class {
     func finishSettings()
+    func select(themeColor: R.Color)
 }
 
-final class SettingsViewController: UIViewController, SettingsPresentable, SettingsViewControllable {
-
+final class SettingsViewController: SettingsPresentable, SettingsViewControllable, ViewStateListener {
+    var uiviewController: UIViewController {
+        return hostingController
+    }
+    
     weak var listener: SettingsPresentableListener?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
+    private let hostingController: UIHostingController<SettingsView>
+    
+    var viewState: SettingsViewState
+    
+    init(viewState: SettingsViewState) {
+        let rootView = SettingsView(state: viewState)
+        self.viewState = viewState
+        self.hostingController = UIHostingController(rootView: rootView)
+        self.viewState.listener = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print(#function)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-
-        guard isBeingDismissed || isMovingFromParent else { return }
+    func onDisappear() {
         listener?.finishSettings()
+    }
+    
+    func select(themeColor: R.Color) {
+        listener?.select(themeColor: themeColor)
     }
 }

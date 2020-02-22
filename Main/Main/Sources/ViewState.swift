@@ -8,6 +8,9 @@
 
 import Foundation
 import HangulClockTable
+import UIKit
+import RxSwift
+import RxCocoa
 
 protocol ViewStateListner: class {
     func onAppear()
@@ -21,9 +24,15 @@ public class ViewState: ObservableObject {
     @Published var year: String = ""
     @Published var month: String = ""
     @Published var day: String = ""
-    
+    @Published var isVisibleSettingsButton = false {
+        willSet {
+            objectWillChange.send()
+        }
+    }
     
     weak var listener: ViewStateListner?
+    
+    private var visualSettingButtonTimerDisposeBag = DisposeBag()
     
     func updateDate(date: Date) {
         let dateFormatter = DateFormatter()
@@ -64,8 +73,27 @@ public class ViewState: ObservableObject {
         listener?.onAppear()
     }
     
+    func onDisappear() {
+        print(#file, #function)
+    }
+    
     func tapSettings() {
         listener?.tapSettings()
+    }
+    
+    func tapView() {
+        print(#file, #function)
+        if isVisibleSettingsButton == false {
+           isVisibleSettingsButton = true
+            Single<Int>.just(1)
+                .delay(.seconds(4), scheduler: MainScheduler.instance)
+                .subscribe { [weak self] _ in
+                    self?.isVisibleSettingsButton = false
+            }.disposed(by: visualSettingButtonTimerDisposeBag)
+        } else {
+           isVisibleSettingsButton = false
+            visualSettingButtonTimerDisposeBag = DisposeBag()
+        }
     }
 }
 

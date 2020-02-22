@@ -16,9 +16,13 @@
 
 import RIBs
 import Main
+import Resource
 
 class AppComponent: RIBs.Component<RIBs.EmptyDependency>, MainDependency {
+    var bgColor: UIColor
+    
     init() {
+        self.bgColor = R.ThemeColor.savedColor.color
         super.init(dependency: RIBs.EmptyComponent())
     }
 }
