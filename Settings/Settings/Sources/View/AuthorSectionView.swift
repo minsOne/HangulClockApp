@@ -13,7 +13,7 @@ struct AuthorSectionView: View {
     var body: some View {
         Section(header: Text("Author").font(.headline)) {
             Text("Developer : Ahn Jung Min")
-            Text("Designer : Lee Do Young")
+            Text("Designer : Lee Do Yeong")
         }
     }
 }
