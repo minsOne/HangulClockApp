@@ -29,6 +29,9 @@ struct LicenseSectionView: View {
                 한글시계 for iOS는 Github 저장소에서 확인할 수 있습니다.
                 """)
                 .padding()
+            Text("Github으로 이동")
+                .foregroundColor(Color.blue)
+                .padding()
                 .onTapGesture {
                     URL(string: "https://github.com/minsOne/HangulClockApp")
                         .map { UIApplication.shared.open($0) }
