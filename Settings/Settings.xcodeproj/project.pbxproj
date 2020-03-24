@@ -568,7 +568,7 @@
 /* Begin XCRemoteSwiftPackageReference section */
 		CBDDDACC23EFF9E400FDD1F6 /* XCRemoteSwiftPackageReference "pure-swift-ui" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:CodeSlicing/pure-swift-ui.git";
+			repositoryURL = "https://github.com/CodeSlicing/pure-swift-ui.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.13.1;
@@ -576,7 +576,7 @@
 		};
 		CBDDDACF23EFF9F900FDD1F6 /* XCRemoteSwiftPackageReference "pure-swift-ui-tools" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:CodeSlicing/pure-swift-ui-tools.git";
+			repositoryURL = "https://github.com/CodeSlicing/pure-swift-ui-tools.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.1.0;
