@@ -3,15 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB2FEF25246AEBDB0011B766 /* RIBs in Frameworks */ = {isa = PBXBuildFile; productRef = CB2FEF24246AEBDB0011B766 /* RIBs */; };
+		CB2FEF28246AEC4C0011B766 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CB2FEF27246AEC4C0011B766 /* RxSwift */; };
+		CB2FEF2A246AEC4C0011B766 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = CB2FEF29246AEC4C0011B766 /* RxRelay */; };
+		CB2FEF2C246AEC4C0011B766 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CB2FEF2B246AEC4C0011B766 /* RxCocoa */; };
+		CB2FEF2E246AEC4C0011B766 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = CB2FEF2D246AEC4C0011B766 /* RxBlocking */; };
+		CB2FEF30246AEC5C0011B766 /* Umbrella.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FEF2F246AEC5C0011B766 /* Umbrella.swift */; };
+		CB2FEF41246AEE500011B766 /* PureSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CB2FEF40246AEE500011B766 /* PureSwiftUI */; };
+		CB2FEF44246AEE670011B766 /* PureSwiftUITools in Frameworks */ = {isa = PBXBuildFile; productRef = CB2FEF43246AEE670011B766 /* PureSwiftUITools */; };
 		CB68719123EC6508002FA3C5 /* Umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB68718F23EC6508002FA3C5 /* Umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB68719D23EC6528002FA3C5 /* Main.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB68719923EC6528002FA3C5 /* Main.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB2FEF2F246AEC5C0011B766 /* Umbrella.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Umbrella.swift; sourceTree = "<group>"; };
 		CB68718C23EC6508002FA3C5 /* Umbrella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Umbrella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB68718F23EC6508002FA3C5 /* Umbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Umbrella.h; sourceTree = "<group>"; };
 		CB68719023EC6508002FA3C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -25,7 +33,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB68719D23EC6528002FA3C5 /* Main.framework in Frameworks */,
+				CB2FEF2A246AEC4C0011B766 /* RxRelay in Frameworks */,
+				CB2FEF44246AEE670011B766 /* PureSwiftUITools in Frameworks */,
+				CB2FEF28246AEC4C0011B766 /* RxSwift in Frameworks */,
+				CB2FEF2C246AEC4C0011B766 /* RxCocoa in Frameworks */,
+				CB2FEF25246AEBDB0011B766 /* RIBs in Frameworks */,
+				CB2FEF41246AEE500011B766 /* PureSwiftUI in Frameworks */,
+				CB2FEF2E246AEC4C0011B766 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +68,7 @@
 			children = (
 				CB68718F23EC6508002FA3C5 /* Umbrella.h */,
 				CB68719023EC6508002FA3C5 /* Info.plist */,
+				CB2FEF2F246AEC5C0011B766 /* Umbrella.swift */,
 			);
 			path = Umbrella;
 			sourceTree = "<group>";
@@ -96,6 +111,15 @@
 			dependencies = (
 			);
 			name = Umbrella;
+			packageProductDependencies = (
+				CB2FEF24246AEBDB0011B766 /* RIBs */,
+				CB2FEF27246AEC4C0011B766 /* RxSwift */,
+				CB2FEF29246AEC4C0011B766 /* RxRelay */,
+				CB2FEF2B246AEC4C0011B766 /* RxCocoa */,
+				CB2FEF2D246AEC4C0011B766 /* RxBlocking */,
+				CB2FEF40246AEE500011B766 /* PureSwiftUI */,
+				CB2FEF43246AEE670011B766 /* PureSwiftUITools */,
+			);
 			productName = Umbrella;
 			productReference = CB68718C23EC6508002FA3C5 /* Umbrella.framework */;
 			productType = "com.apple.product-type.framework";
@@ -111,6 +135,7 @@
 				TargetAttributes = {
 					CB68718B23EC6508002FA3C5 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -123,6 +148,12 @@
 				Base,
 			);
 			mainGroup = CB68718223EC6508002FA3C5;
+			packageReferences = (
+				CB2FEF23246AEBDB0011B766 /* XCRemoteSwiftPackageReference "RIBs" */,
+				CB2FEF26246AEC4C0011B766 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				CB2FEF3F246AEE500011B766 /* XCRemoteSwiftPackageReference "pure-swift-ui" */,
+				CB2FEF42246AEE670011B766 /* XCRemoteSwiftPackageReference "pure-swift-ui-tools" */,
+			);
 			productRefGroup = CB68718D23EC6508002FA3C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB2FEF30246AEC5C0011B766 /* Umbrella.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +308,7 @@
 		CB68719523EC6508002FA3C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6794ZU679A;
@@ -294,6 +327,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.minsOne.Labs.Hangul.Umbrella;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,6 +336,7 @@
 		CB68719623EC6508002FA3C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6794ZU679A;
@@ -347,6 +382,79 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB2FEF23246AEBDB0011B766 /* XCRemoteSwiftPackageReference "RIBs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/RIBs";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CB2FEF26246AEC4C0011B766 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CB2FEF3F246AEE500011B766 /* XCRemoteSwiftPackageReference "pure-swift-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CodeSlicing/pure-swift-ui.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.15.1;
+			};
+		};
+		CB2FEF42246AEE670011B766 /* XCRemoteSwiftPackageReference "pure-swift-ui-tools" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CodeSlicing/pure-swift-ui-tools.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB2FEF24246AEBDB0011B766 /* RIBs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB2FEF23246AEBDB0011B766 /* XCRemoteSwiftPackageReference "RIBs" */;
+			productName = RIBs;
+		};
+		CB2FEF27246AEC4C0011B766 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB2FEF26246AEC4C0011B766 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		CB2FEF29246AEC4C0011B766 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB2FEF26246AEC4C0011B766 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		CB2FEF2B246AEC4C0011B766 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB2FEF26246AEC4C0011B766 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		CB2FEF2D246AEC4C0011B766 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB2FEF26246AEC4C0011B766 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		CB2FEF40246AEE500011B766 /* PureSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB2FEF3F246AEE500011B766 /* XCRemoteSwiftPackageReference "pure-swift-ui" */;
+			productName = PureSwiftUI;
+		};
+		CB2FEF43246AEE670011B766 /* PureSwiftUITools */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB2FEF42246AEE670011B766 /* XCRemoteSwiftPackageReference "pure-swift-ui-tools" */;
+			productName = PureSwiftUITools;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CB68718323EC6508002FA3C5 /* Project object */;
 }

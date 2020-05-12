@@ -17,6 +17,7 @@
 import RIBs
 import Main
 import Resource
+import UIKit
 
 class AppComponent: RIBs.Component<RIBs.EmptyDependency>, MainDependency {
     var bgColor: UIColor

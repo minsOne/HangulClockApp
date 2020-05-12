@@ -6,6 +6,7 @@
 //  Copyright © 2020 minsone. All rights reserved.
 //
 
+import UIKit
 import RIBs
 import RxSwift
 import RxRelay

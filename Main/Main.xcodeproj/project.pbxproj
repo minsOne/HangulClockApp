@@ -7,20 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB2FEF36246AED850011B766 /* Umbrella.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2FEF35246AED850011B766 /* Umbrella.framework */; };
 		CB4EF11623F18DB800D4D5A4 /* DateTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EF11523F18DB800D4D5A4 /* DateTextView.swift */; };
 		CB4EF11823F18DF800D4D5A4 /* CornerLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EF11723F18DF800D4D5A4 /* CornerLineView.swift */; };
 		CB68717C23EC64A5002FA3C5 /* Main.h in Headers */ = {isa = PBXBuildFile; fileRef = CB68717A23EC64A5002FA3C5 /* Main.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB6871AC23EDAF1E002FA3C5 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871AA23EDAF1E002FA3C5 /* RIBs.framework */; };
-		CB6871AE23EDAF1E002FA3C5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871AB23EDAF1E002FA3C5 /* RxSwift.framework */; };
 		CB6871B523EDAFE6002FA3C5 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871B123EDAFE6002FA3C5 /* MainRouter.swift */; };
 		CB6871B623EDAFE6002FA3C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871B223EDAFE6002FA3C5 /* MainViewController.swift */; };
 		CB6871B723EDAFE6002FA3C5 /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871B323EDAFE6002FA3C5 /* MainBuilder.swift */; };
 		CB6871B823EDAFE6002FA3C5 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871B423EDAFE6002FA3C5 /* MainInteractor.swift */; };
-		CB6871C623EDB51B002FA3C5 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871C423EDB51B002FA3C5 /* RxRelay.framework */; };
-		CB6871C823EDB51B002FA3C5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6871C523EDB51B002FA3C5 /* RxCocoa.framework */; };
-		CB6871D023EDB7E5002FA3C5 /* PureSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CB6871CF23EDB7E5002FA3C5 /* PureSwiftUI */; };
 		CB6871D423EDB907002FA3C5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871D323EDB907002FA3C5 /* MainView.swift */; };
-		CB6871DA23EDBB9B002FA3C5 /* PureSwiftUITools in Frameworks */ = {isa = PBXBuildFile; productRef = CB6871D923EDBB9B002FA3C5 /* PureSwiftUITools */; };
 		CB6871F723EE53DD002FA3C5 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871F623EE53DD002FA3C5 /* ViewState.swift */; };
 		CB6871F923EE54BC002FA3C5 /* TimeIntervalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871F823EE54BC002FA3C5 /* TimeIntervalService.swift */; };
 		CB6871FC23EE5673002FA3C5 /* DateFormatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871FB23EE5673002FA3C5 /* DateFormatService.swift */; };
@@ -30,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB2FEF35246AED850011B766 /* Umbrella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Umbrella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4EF11523F18DB800D4D5A4 /* DateTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTextView.swift; sourceTree = "<group>"; };
 		CB4EF11723F18DF800D4D5A4 /* CornerLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerLineView.swift; sourceTree = "<group>"; };
 		CB68717723EC64A5002FA3C5 /* Main.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Main.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,14 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB6871D023EDB7E5002FA3C5 /* PureSwiftUI in Frameworks */,
-				CB6871C823EDB51B002FA3C5 /* RxCocoa.framework in Frameworks */,
 				CB68722A23EF0780002FA3C5 /* HangulClockTable.framework in Frameworks */,
-				CB6871DA23EDBB9B002FA3C5 /* PureSwiftUITools in Frameworks */,
-				CB6871AE23EDAF1E002FA3C5 /* RxSwift.framework in Frameworks */,
 				CBEF530723EF0C4300285179 /* FoundationExtension.framework in Frameworks */,
-				CB6871AC23EDAF1E002FA3C5 /* RIBs.framework in Frameworks */,
-				CB6871C623EDB51B002FA3C5 /* RxRelay.framework in Frameworks */,
+				CB2FEF36246AED850011B766 /* Umbrella.framework in Frameworks */,
 				CBDDDAD323EFFBA900FDD1F6 /* Settings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +117,7 @@
 		CB6871A923EDAF1E002FA3C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB2FEF35246AED850011B766 /* Umbrella.framework */,
 				CBDDDAD223EFFBA900FDD1F6 /* Settings.framework */,
 				CBEF530623EF0C4300285179 /* FoundationExtension.framework */,
 				CB68722923EF0780002FA3C5 /* HangulClockTable.framework */,
@@ -175,8 +167,6 @@
 			);
 			name = Main;
 			packageProductDependencies = (
-				CB6871CF23EDB7E5002FA3C5 /* PureSwiftUI */,
-				CB6871D923EDBB9B002FA3C5 /* PureSwiftUITools */,
 			);
 			productName = Main;
 			productReference = CB68717723EC64A5002FA3C5 /* Main.framework */;
@@ -464,19 +454,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CB6871CF23EDB7E5002FA3C5 /* PureSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CB6871CE23EDB7E4002FA3C5 /* XCRemoteSwiftPackageReference "pure-swift-ui" */;
-			productName = PureSwiftUI;
-		};
-		CB6871D923EDBB9B002FA3C5 /* PureSwiftUITools */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CB6871D823EDBB9B002FA3C5 /* XCRemoteSwiftPackageReference "pure-swift-ui-tools" */;
-			productName = PureSwiftUITools;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CB68716E23EC64A5002FA3C5 /* Project object */;
 }

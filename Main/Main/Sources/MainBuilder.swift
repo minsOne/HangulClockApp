@@ -9,6 +9,7 @@
 import RIBs
 import Settings
 import Resource
+import UIKit
 
 public protocol MainDependency: Dependency {
     var timeIntervalService: TimeIntervalServicable { get }

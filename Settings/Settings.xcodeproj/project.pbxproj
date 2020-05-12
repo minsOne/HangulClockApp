@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB2FEF32246AED7B0011B766 /* Umbrella.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2FEF31246AED7B0011B766 /* Umbrella.framework */; };
 		CB320DDE23FFB78500E2F8C3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB320DDD23FFB78500E2F8C3 /* SettingsView.swift */; };
 		CB320DE023FFBE5E00E2F8C3 /* SettingsViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB320DDF23FFBE5E00E2F8C3 /* SettingsViewState.swift */; };
 		CB320DF72400CA1800E2F8C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB320DF62400CA1800E2F8C3 /* AppDelegate.swift */; };
@@ -24,14 +25,10 @@
 		CBDDDABE23EFF93600FDD1F6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDDDABA23EFF93600FDD1F6 /* SettingsViewController.swift */; };
 		CBDDDABF23EFF93600FDD1F6 /* SettingsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDDDABB23EFF93600FDD1F6 /* SettingsBuilder.swift */; };
 		CBDDDAC023EFF93600FDD1F6 /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDDDABC23EFF93600FDD1F6 /* SettingsInteractor.swift */; };
-		CBDDDAC523EFF99100FDD1F6 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDDDAC223EFF99100FDD1F6 /* RxRelay.framework */; };
-		CBDDDAC723EFF99100FDD1F6 /* RIBs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDDDAC323EFF99100FDD1F6 /* RIBs.framework */; };
-		CBDDDAC923EFF99100FDD1F6 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDDDAC423EFF99100FDD1F6 /* RxSwift.framework */; };
-		CBDDDACE23EFF9E400FDD1F6 /* PureSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CBDDDACD23EFF9E400FDD1F6 /* PureSwiftUI */; };
-		CBDDDAD123EFF9F900FDD1F6 /* PureSwiftUITools in Frameworks */ = {isa = PBXBuildFile; productRef = CBDDDAD023EFF9F900FDD1F6 /* PureSwiftUITools */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB2FEF31246AED7B0011B766 /* Umbrella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Umbrella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB320DDD23FFB78500E2F8C3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CB320DDF23FFBE5E00E2F8C3 /* SettingsViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewState.swift; sourceTree = "<group>"; };
 		CB320DF42400CA1800E2F8C3 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,12 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBDDDAC723EFF99100FDD1F6 /* RIBs.framework in Frameworks */,
-				CBDDDAC523EFF99100FDD1F6 /* RxRelay.framework in Frameworks */,
-				CBDDDAD123EFF9F900FDD1F6 /* PureSwiftUITools in Frameworks */,
-				CBDDDACE23EFF9E400FDD1F6 /* PureSwiftUI in Frameworks */,
+				CB2FEF32246AED7B0011B766 /* Umbrella.framework in Frameworks */,
 				CB320E0B2400FC2E00E2F8C3 /* Resource.framework in Frameworks */,
-				CBDDDAC923EFF99100FDD1F6 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +149,7 @@
 		CBDDDAC123EFF99100FDD1F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB2FEF31246AED7B0011B766 /* Umbrella.framework */,
 				CB320E0A2400FC2E00E2F8C3 /* Resource.framework */,
 				CBDDDAC323EFF99100FDD1F6 /* RIBs.framework */,
 				CBDDDAC223EFF99100FDD1F6 /* RxRelay.framework */,
@@ -210,8 +204,6 @@
 			);
 			name = Settings;
 			packageProductDependencies = (
-				CBDDDACD23EFF9E400FDD1F6 /* PureSwiftUI */,
-				CBDDDAD023EFF9F900FDD1F6 /* PureSwiftUITools */,
 			);
 			productName = Settings;
 			productReference = CBDDDAAD23EFF8FA00FDD1F6 /* Settings.framework */;
@@ -583,19 +575,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CBDDDACD23EFF9E400FDD1F6 /* PureSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CBDDDACC23EFF9E400FDD1F6 /* XCRemoteSwiftPackageReference "pure-swift-ui" */;
-			productName = PureSwiftUI;
-		};
-		CBDDDAD023EFF9F900FDD1F6 /* PureSwiftUITools */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CBDDDACF23EFF9F900FDD1F6 /* XCRemoteSwiftPackageReference "pure-swift-ui-tools" */;
-			productName = PureSwiftUITools;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CBDDDAA423EFF8FA00FDD1F6 /* Project object */;
 }

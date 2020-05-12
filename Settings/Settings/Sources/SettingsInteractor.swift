@@ -9,6 +9,7 @@
 import RIBs
 import RxSwift
 import Resource
+import UIKit
 
 public protocol SettingsRouting: ViewableRouting {}
 
