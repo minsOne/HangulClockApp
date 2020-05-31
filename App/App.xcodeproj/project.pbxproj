@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB2FEF3A246AED910011B766 /* Umbrella.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2FEF39246AED910011B766 /* Umbrella.framework */; };
 		CB2FEF3D246AEDB60011B766 /* Main.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2FEF3C246AEDB60011B766 /* Main.framework */; };
 		CB4EF10723F0575D00D4D5A4 /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBEF536023EF276E00285179 /* Logger.framework */; };
 		CB4EF10823F0575D00D4D5A4 /* Logger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBEF536023EF276E00285179 /* Logger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -18,6 +17,8 @@
 		CB6870BC23EC6054002FA3C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6870BA23EC6054002FA3C5 /* LaunchScreen.storyboard */; };
 		CB6871C023EDB25D002FA3C5 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871BF23EDB25D002FA3C5 /* AppComponent.swift */; };
 		CB6871D723EDB9BB002FA3C5 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6871D523EDB9B2002FA3C5 /* Preview.swift */; };
+		CBE395682472DC0E00B54FC9 /* Umbrella.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE395672472DC0E00B54FC9 /* Umbrella.framework */; };
+		CBE395692472DC0F00B54FC9 /* Umbrella.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBE395672472DC0E00B54FC9 /* Umbrella.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				CB4EF10A23F0575D00D4D5A4 /* Resource.framework in Embed Frameworks */,
+				CBE395692472DC0F00B54FC9 /* Umbrella.framework in Embed Frameworks */,
 				CB4EF10823F0575D00D4D5A4 /* Logger.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -53,6 +55,9 @@
 		CB6871CB23EDB52B002FA3C5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		CB6871D523EDB9B2002FA3C5 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 		CB6871F323EDC732002FA3C5 /* ClockTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClockTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBE395622472DBE800B54FC9 /* Umbrella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Umbrella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBE395652472DBF700B54FC9 /* Umbrella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Umbrella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBE395672472DC0E00B54FC9 /* Umbrella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Umbrella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEF536023EF276E00285179 /* Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -62,8 +67,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB4EF10723F0575D00D4D5A4 /* Logger.framework in Frameworks */,
-				CB2FEF3A246AED910011B766 /* Umbrella.framework in Frameworks */,
 				CB4EF10923F0575D00D4D5A4 /* Resource.framework in Frameworks */,
+				CBE395682472DC0E00B54FC9 /* Umbrella.framework in Frameworks */,
 				CB2FEF3D246AEDB60011B766 /* Main.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +109,9 @@
 		CB6870C323EC6320002FA3C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CBE395672472DC0E00B54FC9 /* Umbrella.framework */,
+				CBE395652472DBF700B54FC9 /* Umbrella.framework */,
+				CBE395622472DBE800B54FC9 /* Umbrella.framework */,
 				CB2FEF3C246AEDB60011B766 /* Main.framework */,
 				CB2FEF39246AED910011B766 /* Umbrella.framework */,
 				CBEF536023EF276E00285179 /* Logger.framework */,

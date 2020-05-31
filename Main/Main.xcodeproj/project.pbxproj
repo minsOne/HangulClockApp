@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB2F0E4A2483FBDF001F4D16 /* AlphaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F0E462483FBDF001F4D16 /* AlphaRouter.swift */; };
+		CB2F0E4B2483FBDF001F4D16 /* AlphaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F0E472483FBDF001F4D16 /* AlphaViewController.swift */; };
+		CB2F0E4C2483FBDF001F4D16 /* AlphaBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F0E482483FBDF001F4D16 /* AlphaBuilder.swift */; };
+		CB2F0E4D2483FBDF001F4D16 /* AlphaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F0E492483FBDF001F4D16 /* AlphaInteractor.swift */; };
+		CB2F0E562483FC63001F4D16 /* CommonBetaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F0E532483FC63001F4D16 /* CommonBetaRouter.swift */; };
+		CB2F0E572483FC63001F4D16 /* CommonBetaBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F0E542483FC63001F4D16 /* CommonBetaBuilder.swift */; };
+		CB2F0E582483FC63001F4D16 /* CommonBetaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F0E552483FC63001F4D16 /* CommonBetaInteractor.swift */; };
+		CB2F0E5C2483FC70001F4D16 /* CharlieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F0E592483FC70001F4D16 /* CharlieRouter.swift */; };
+		CB2F0E5D2483FC70001F4D16 /* CharlieBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F0E5A2483FC70001F4D16 /* CharlieBuilder.swift */; };
+		CB2F0E5E2483FC70001F4D16 /* CharlieInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F0E5B2483FC70001F4D16 /* CharlieInteractor.swift */; };
 		CB2FEF36246AED850011B766 /* Umbrella.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2FEF35246AED850011B766 /* Umbrella.framework */; };
 		CB4EF11623F18DB800D4D5A4 /* DateTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EF11523F18DB800D4D5A4 /* DateTextView.swift */; };
 		CB4EF11823F18DF800D4D5A4 /* CornerLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4EF11723F18DF800D4D5A4 /* CornerLineView.swift */; };
@@ -25,6 +35,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB2F0E462483FBDF001F4D16 /* AlphaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaRouter.swift; sourceTree = "<group>"; };
+		CB2F0E472483FBDF001F4D16 /* AlphaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaViewController.swift; sourceTree = "<group>"; };
+		CB2F0E482483FBDF001F4D16 /* AlphaBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaBuilder.swift; sourceTree = "<group>"; };
+		CB2F0E492483FBDF001F4D16 /* AlphaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaInteractor.swift; sourceTree = "<group>"; };
+		CB2F0E532483FC63001F4D16 /* CommonBetaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBetaRouter.swift; sourceTree = "<group>"; };
+		CB2F0E542483FC63001F4D16 /* CommonBetaBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBetaBuilder.swift; sourceTree = "<group>"; };
+		CB2F0E552483FC63001F4D16 /* CommonBetaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBetaInteractor.swift; sourceTree = "<group>"; };
+		CB2F0E592483FC70001F4D16 /* CharlieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharlieRouter.swift; sourceTree = "<group>"; };
+		CB2F0E5A2483FC70001F4D16 /* CharlieBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharlieBuilder.swift; sourceTree = "<group>"; };
+		CB2F0E5B2483FC70001F4D16 /* CharlieInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharlieInteractor.swift; sourceTree = "<group>"; };
 		CB2FEF35246AED850011B766 /* Umbrella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Umbrella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4EF11523F18DB800D4D5A4 /* DateTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTextView.swift; sourceTree = "<group>"; };
 		CB4EF11723F18DF800D4D5A4 /* CornerLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerLineView.swift; sourceTree = "<group>"; };
@@ -63,6 +83,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB2F0E452483FBA9001F4D16 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				CB2F0E502483FC30001F4D16 /* Alpha */,
+				CB2F0E512483FC37001F4D16 /* Beta */,
+				CB2F0E522483FC44001F4D16 /* Charlie */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
+		CB2F0E502483FC30001F4D16 /* Alpha */ = {
+			isa = PBXGroup;
+			children = (
+				CB2F0E482483FBDF001F4D16 /* AlphaBuilder.swift */,
+				CB2F0E492483FBDF001F4D16 /* AlphaInteractor.swift */,
+				CB2F0E462483FBDF001F4D16 /* AlphaRouter.swift */,
+				CB2F0E472483FBDF001F4D16 /* AlphaViewController.swift */,
+			);
+			path = Alpha;
+			sourceTree = "<group>";
+		};
+		CB2F0E512483FC37001F4D16 /* Beta */ = {
+			isa = PBXGroup;
+			children = (
+				CB2F0E542483FC63001F4D16 /* CommonBetaBuilder.swift */,
+				CB2F0E552483FC63001F4D16 /* CommonBetaInteractor.swift */,
+				CB2F0E532483FC63001F4D16 /* CommonBetaRouter.swift */,
+			);
+			path = Beta;
+			sourceTree = "<group>";
+		};
+		CB2F0E522483FC44001F4D16 /* Charlie */ = {
+			isa = PBXGroup;
+			children = (
+				CB2F0E5A2483FC70001F4D16 /* CharlieBuilder.swift */,
+				CB2F0E5B2483FC70001F4D16 /* CharlieInteractor.swift */,
+				CB2F0E592483FC70001F4D16 /* CharlieRouter.swift */,
+			);
+			path = Charlie;
+			sourceTree = "<group>";
+		};
 		CB4EF11423F18DA700D4D5A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +154,7 @@
 		CB68717923EC64A5002FA3C5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CB2F0E452483FBA9001F4D16 /* Sample */,
 				CB6871A823EC66CC002FA3C5 /* Sources */,
 				CB68717A23EC64A5002FA3C5 /* Main.h */,
 				CB68717B23EC64A5002FA3C5 /* Info.plist */,
@@ -223,15 +285,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB2F0E582483FC63001F4D16 /* CommonBetaInteractor.swift in Sources */,
 				CB6871B523EDAFE6002FA3C5 /* MainRouter.swift in Sources */,
 				CB4EF11823F18DF800D4D5A4 /* CornerLineView.swift in Sources */,
+				CB2F0E4C2483FBDF001F4D16 /* AlphaBuilder.swift in Sources */,
 				CB6871F923EE54BC002FA3C5 /* TimeIntervalService.swift in Sources */,
+				CB2F0E5C2483FC70001F4D16 /* CharlieRouter.swift in Sources */,
 				CB6871FC23EE5673002FA3C5 /* DateFormatService.swift in Sources */,
 				CB6871B623EDAFE6002FA3C5 /* MainViewController.swift in Sources */,
 				CB6871F723EE53DD002FA3C5 /* ViewState.swift in Sources */,
+				CB2F0E562483FC63001F4D16 /* CommonBetaRouter.swift in Sources */,
 				CB6871B723EDAFE6002FA3C5 /* MainBuilder.swift in Sources */,
 				CB6871D423EDB907002FA3C5 /* MainView.swift in Sources */,
+				CB2F0E4D2483FBDF001F4D16 /* AlphaInteractor.swift in Sources */,
+				CB2F0E5E2483FC70001F4D16 /* CharlieInteractor.swift in Sources */,
 				CB4EF11623F18DB800D4D5A4 /* DateTextView.swift in Sources */,
+				CB2F0E4B2483FBDF001F4D16 /* AlphaViewController.swift in Sources */,
+				CB2F0E5D2483FC70001F4D16 /* CharlieBuilder.swift in Sources */,
+				CB2F0E4A2483FBDF001F4D16 /* AlphaRouter.swift in Sources */,
+				CB2F0E572483FC63001F4D16 /* CommonBetaBuilder.swift in Sources */,
 				CB6871B823EDAFE6002FA3C5 /* MainInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
