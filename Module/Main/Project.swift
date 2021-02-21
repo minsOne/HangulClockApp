@@ -3,10 +3,10 @@ import ProjectDescriptionHelpers
 
 let project: Project =
     .staticFramework(name: "Main",
-                     packages: [.resouce],
+                     packages: [.resouce, .umbrella],
                      platform: .iOS,
                      dependencies: [.FoundationExtension,
                                     .HangulClockTable,
-                                    .UmbrellaSwiftPM,
+                                    .Umbrella,
                                     .Settings
                      ])
