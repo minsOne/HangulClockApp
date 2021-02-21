@@ -1,0 +1,5 @@
+framework module FirebaseInstallations {
+umbrella header "FirebaseInstallations.h"
+export *
+module * { export * }
+}

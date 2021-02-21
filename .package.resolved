@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "PureSwiftUI",
+        "repositoryURL": "https://github.com/CodeSlicing/pure-swift-ui.git",
+        "state": {
+          "branch": null,
+          "revision": "69699139cb40b3cfa27af404766a9582df953ba0",
+          "version": "1.20.0"
+        }
+      },
+      {
+        "package": "PureSwiftUITools",
+        "repositoryURL": "https://github.com/CodeSlicing/pure-swift-ui-tools.git",
+        "state": {
+          "branch": null,
+          "revision": "deb59d38b53dbce72e153d81cdbf098e9ccc2e71",
+          "version": "1.3.1"
+        }
+      },
+      {
+        "package": "RIBs",
+        "repositoryURL": "https://github.com/uber/RIBs",
+        "state": {
+          "branch": "master",
+          "revision": "0fa0b468398bc050d6a065cdb6c3b8acd9da051a",
+          "version": null
+        }
+      },
+      {
+        "package": "RxSwift",
+        "repositoryURL": "https://github.com/ReactiveX/RxSwift",
+        "state": {
+          "branch": null,
+          "revision": "002d325b0bdee94e7882e1114af5ff4fe1e96afa",
+          "version": "5.1.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

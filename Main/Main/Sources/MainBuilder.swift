@@ -1,6 +1,6 @@
 //
-//  MainBuilder.swift
-//  Main
+//  UserProfileBuilder.swift
+//  UserProfile
 //
 //  Created by minsone on 2020/02/07.
 //  Copyright © 2020 minsone. All rights reserved.
@@ -11,59 +11,60 @@ import Settings
 import Resource
 import UIKit
 
-public protocol MainDependency: Dependency {
-    var timeIntervalService: TimeIntervalServicable { get }
-    var dateFormatService: DateFormatServicable { get }
-    var bgColor: UIColor { get }
+public protocol UserProfileDependency: Dependency {
+    var name: String { get }
+    var age: UInt { get }
+    var address: String { get }
 }
 
-public extension MainDependency {
-    var timeIntervalService: TimeIntervalServicable {
-        TimeIntervalService()
-    }
-    var dateFormatService: DateFormatServicable {
-        DateFormatService()
-    }
-}
-
-final class MainComponent: Component<MainDependency>, SettingsDependency {
-    var colors: [R.Color] {
-        R.ThemeColor.list
-    }
-
-    fileprivate let timeIntervalService: TimeIntervalServicable
-    fileprivate let dateFormatService: DateFormatServicable
-    fileprivate let bgColor: UIColor
+@dynamicMemberLookup
+final class UserProfileComponent: Component<UserProfileDependency> {
+    let name: [String] = ["Hello world"]
+    let address: String = "Korea"
     
-    override init(dependency: MainDependency) {
-        self.timeIntervalService = dependency.timeIntervalService
-        self.dateFormatService = dependency.dateFormatService
-        self.bgColor = dependency.bgColor
+    override init(dependency: UserProfileDependency) {
         super.init(dependency: dependency)
+    }
+    subscript<U>(dynamicMember keyPath: KeyPath<UserProfileDependency, U>) -> U {
+        dependency[keyPath: keyPath]
     }
 }
 
-// MARK: - Builder
-
-public protocol MainBuildable: Buildable {
-    func build() -> LaunchRouting
+public protocol UserProfileBuildable: Buildable {
+    func build() -> UserProfileRouting
 }
+public final class UserProfileBuilder: Builder<UserProfileDependency>, UserProfileBuildable {
 
-public final class MainBuilder: Builder<MainDependency>, MainBuildable {
-
-    public override init(dependency: MainDependency) {
+    public override init(dependency: UserProfileDependency) {
         super.init(dependency: dependency)
     }
 
-    public func build() -> LaunchRouting {
-        let component = MainComponent(dependency: dependency)
-        let viewController = MainViewController(bgColor: component.bgColor)
+    public func build() -> UserProfileRouting {
+        let component = UserProfileComponent(dependency: dependency)
+        _ = component.name
+        _ = component.age
+        _ = component.address
+        
+        
+        
+        
+        let viewController = UserProfileViewController(bgColor: component.bgColor)
         let settingsBuilder = SettingsBuilder(dependency: component)
-        let interactor = MainInteractor(presenter: viewController,
+        let interactor = UserProfileInteractor(presenter: viewController,
                                         timeIntervalService: component.timeIntervalService,
                                         dateFormatService: component.dateFormatService)
-        return MainRouter(interactor: interactor,
+        return UserProfileRouter(interactor: interactor,
                           settingsBuilder: settingsBuilder,
                           viewController: viewController)
     }
+}
+
+extension UserProfileComponent {
+    var colors: [R.Color] {
+        []
+    }
+}
+
+public protocol UserProfileRouting {
+    
 }
