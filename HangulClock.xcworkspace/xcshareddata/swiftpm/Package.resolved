@@ -20,20 +20,11 @@
         }
       },
       {
-        "package": "RIBs",
-        "repositoryURL": "https://github.com/uber/RIBs",
-        "state": {
-          "branch": "master",
-          "revision": "ffc489f00db785c8c0051678393f7aba0d52f1a4",
-          "version": null
-        }
-      },
-      {
         "package": "RxSwift",
         "repositoryURL": "https://github.com/ReactiveX/RxSwift",
         "state": {
-          "branch": "master",
-          "revision": "a580d07ed002217fd91d8446c3a852486e9beefa",
+          "branch": "main",
+          "revision": "7e01c05f25c025143073eaa3be3532f9375c614b",
           "version": null
         }
       }

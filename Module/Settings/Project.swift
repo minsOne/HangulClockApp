@@ -5,4 +5,4 @@ let project: Project =
     .staticFramework(name: "Settings",
                      packages: [.resouce],
                      platform: .iOS,
-                     dependencies: [.Resource, .AnalyticsKit])
+                     dependencies: [.Resource, .AnalyticsKit, .Umbrella])

@@ -16,7 +16,7 @@ extension Project {
                                        settings: Settings? = nil) -> Project {
         return self.project(name: name,
                             packages: packages,
-                            product: .staticFramework,
+                            product: .framework,
                             platform: platform,
                             dependencies: dependencies)
     }

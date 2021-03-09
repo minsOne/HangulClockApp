@@ -3,7 +3,7 @@ import ProjectDescriptionHelpers
 
 let project: Project =
     .staticFramework(name: "Main",
-                     packages: [.resouce, .umbrella],
+                     packages: [.resouce],
                      platform: .iOS,
                      dependencies: [.FoundationExtension,
                                     .HangulClockTable,

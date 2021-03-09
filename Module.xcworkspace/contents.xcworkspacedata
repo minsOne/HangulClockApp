@@ -19,5 +19,8 @@
       <FileRef
          location = "group:Settings/Settings.xcodeproj">
       </FileRef>
+      <FileRef
+         location = "group:UmbrellaSwiftPM/UmbrellaSwiftPM.xcodeproj">
+      </FileRef>
    </Group>
 </Workspace>
