@@ -22,6 +22,8 @@ public extension Logger.Firebase {
             else { return }
         
         FirebaseApp.configure(options: fileopts)
+    }
+    static func logEvent() {
         Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
             AnalyticsParameterItemID: "id-111",
             AnalyticsParameterItemName: "title",

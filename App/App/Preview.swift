@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Main
+import MainScene
 import SwiftUI
 import Resource
 

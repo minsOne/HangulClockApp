@@ -8,10 +8,11 @@
 
 import UIKit
 import RIBs
-import Main
+import MainScene
 import Resource
 import Logger
 import MetricKit
+import AnalyticsKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        injectCode()
         
         startConfigure(with: application)
         
@@ -35,8 +37,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    private func injectCode() {
+        AnalyticsKit.Firebase.regist(instance: FirebaseAnalyticsKitWrapper())
+    }
+    
     private func startConfigure(with application: UIApplication) {
-        Logger.Firebase.register()
+        AnalyticsKit.Firebase.register()
+        AnalyticsKit.Firebase.logEvent()
+        
         application.isIdleTimerDisabled = true
         
         if #available(iOS 13.0, *) {

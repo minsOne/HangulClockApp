@@ -15,7 +15,7 @@
 //
 
 import RIBs
-import Main
+import MainScene
 import Resource
 import UIKit
 

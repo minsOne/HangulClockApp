@@ -5,33 +5,20 @@
       location = "container:"
       name = "Feature">
       <FileRef
-         location = "group:Settings/Settings.xcodeproj">
+         location = "group:Module/Settings">
       </FileRef>
       <FileRef
-         location = "group:Main/Main.xcodeproj">
+         location = "group:Module/MainScene">
       </FileRef>
    </Group>
    <Group
       location = "container:"
       name = "Core">
       <FileRef
-         location = "group:FoundationExtension/FoundationExtension.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:HangulClockTable/HangulClockTable.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:Resource/Resource.xcodeproj">
+         location = "group:Module/AnalyticsKit">
       </FileRef>
       <FileRef
          location = "group:Logger/Logger.xcodeproj">
-      </FileRef>
-   </Group>
-   <Group
-      location = "container:"
-      name = "Umbrella">
-      <FileRef
-         location = "group:Umbrella/Umbrella.xcodeproj">
       </FileRef>
    </Group>
    <FileRef

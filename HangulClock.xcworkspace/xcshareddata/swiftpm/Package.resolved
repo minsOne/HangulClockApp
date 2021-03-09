@@ -3,7 +3,7 @@
     "pins": [
       {
         "package": "PureSwiftUI",
-        "repositoryURL": "https://github.com/CodeSlicing/pure-swift-ui.git",
+        "repositoryURL": "https://github.com/CodeSlicing/pure-swift-ui",
         "state": {
           "branch": null,
           "revision": "a4e8b5aba8eedb5fa761d850721b2fe4e5a80bb6",
@@ -12,7 +12,7 @@
       },
       {
         "package": "PureSwiftUITools",
-        "repositoryURL": "https://github.com/CodeSlicing/pure-swift-ui-tools.git",
+        "repositoryURL": "https://github.com/CodeSlicing/pure-swift-ui-tools",
         "state": {
           "branch": null,
           "revision": "e2a5be40fdf18a83c03080af7597ce04439ea1ac",
@@ -32,9 +32,9 @@
         "package": "RxSwift",
         "repositoryURL": "https://github.com/ReactiveX/RxSwift",
         "state": {
-          "branch": "master",
-          "revision": "a580d07ed002217fd91d8446c3a852486e9beefa",
-          "version": null
+          "branch": null,
+          "revision": "002d325b0bdee94e7882e1114af5ff4fe1e96afa",
+          "version": "5.1.1"
         }
       }
     ]
