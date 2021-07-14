@@ -17,7 +17,7 @@ extension R {
         }
         // 현재 테마 색상
         public static var list: [R.Color] {
-            [.c0, .c3, .c1, .c2, .c4]
+            [.c0, .c3, .c5, .c1, .c2, .c6, .c4]
         }
         /// 저장된 색상
         public static var savedColor: R.Color {
